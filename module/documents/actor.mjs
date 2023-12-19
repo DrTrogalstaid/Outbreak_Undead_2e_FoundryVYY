@@ -43,7 +43,9 @@ export class OutbreakUndead2eActor extends Actor {
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
-    if (actorData.type !== 'character') return;
+    if (actorData.type !== 'character') {
+      return;
+    }
 
     // Make modifications to data here. For example:
     const systemData = actorData.system;
@@ -51,7 +53,7 @@ export class OutbreakUndead2eActor extends Actor {
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, ability] of Object.entries(systemData.abilities)) {
       // Calculate the modifier using d20 rules.
-      ability.mod = Math.floor((ability.value - 10) / 2);
+      ability.mod = (ability.value / 10);
     }
   }
 

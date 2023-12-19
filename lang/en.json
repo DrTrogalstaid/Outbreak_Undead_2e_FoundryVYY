@@ -1,17 +1,13 @@
 {
   "OUTBREAKUNDEAD2E.AbilityStr": "Strength",
-  "OUTBREAKUNDEAD2E.AbilityCon": "Constitution",
-  "OUTBREAKUNDEAD2E.AbilityDex": "Dexterity",
-  "OUTBREAKUNDEAD2E.AbilityInt": "Intelligence",
-  "OUTBREAKUNDEAD2E.AbilityWis": "Wisdom",
-  "OUTBREAKUNDEAD2E.AbilityCha": "Charisma",
+  "OUTBREAKUNDEAD2E.AbilityPer": "Perception",
+  "OUTBREAKUNDEAD2E.AbilityEmp": "Empathy",
+  "OUTBREAKUNDEAD2E.AbilityWil": "Willpower",
 
   "OUTBREAKUNDEAD2E.AbilityStrAbbr": "str",
-  "OUTBREAKUNDEAD2E.AbilityConAbbr": "con",
-  "OUTBREAKUNDEAD2E.AbilityDexAbbr": "dex",
-  "OUTBREAKUNDEAD2E.AbilityIntAbbr": "int",
-  "OUTBREAKUNDEAD2E.AbilityWisAbbr": "wis",
-  "OUTBREAKUNDEAD2E.AbilityChaAbbr": "cha",
+  "OUTBREAKUNDEAD2E.AbilityPerAbbr": "per",
+  "OUTBREAKUNDEAD2E.AbilityEmpAbbr": "emp",
+  "OUTBREAKUNDEAD2E.AbilityWilAbbr": "wil",
 
   "OUTBREAKUNDEAD2E.EffectCreate": "Create Effect",
   "OUTBREAKUNDEAD2E.EffectToggle": "Toggle Effect",

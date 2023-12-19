@@ -6,18 +6,14 @@ export const OUTBREAKUNDEAD2E = {};
  */
  OUTBREAKUNDEAD2E.abilities = {
   "str": "OUTBREAKUNDEAD2E.AbilityStr",
-  "dex": "OUTBREAKUNDEAD2E.AbilityDex",
-  "con": "OUTBREAKUNDEAD2E.AbilityCon",
-  "int": "OUTBREAKUNDEAD2E.AbilityInt",
-  "wis": "OUTBREAKUNDEAD2E.AbilityWis",
-  "cha": "OUTBREAKUNDEAD2E.AbilityCha"
+  "per": "OUTBREAKUNDEAD2E.AbilityPer",
+  "emp": "OUTBREAKUNDEAD2E.AbilityEmp",
+  "wil": "OUTBREAKUNDEAD2E.AbilityWil"
 };
 
 OUTBREAKUNDEAD2E.abilityAbbreviations = {
   "str": "OUTBREAKUNDEAD2E.AbilityStrAbbr",
-  "dex": "OUTBREAKUNDEAD2E.AbilityDexAbbr",
-  "con": "OUTBREAKUNDEAD2E.AbilityConAbbr",
-  "int": "OUTBREAKUNDEAD2E.AbilityIntAbbr",
-  "wis": "OUTBREAKUNDEAD2E.AbilityWisAbbr",
-  "cha": "OUTBREAKUNDEAD2E.AbilityChaAbbr"
+  "per": "OUTBREAKUNDEAD2E.AbilityPerAbbr",
+  "emp": "OUTBREAKUNDEAD2E.AbilityEmpAbbr",
+  "wil": "OUTBREAKUNDEAD2E.AbilityWilAbbr",
 };
