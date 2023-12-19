@@ -38,7 +38,7 @@
   "packFolders": [],
   "socket": false,
   "manifest": "https://github.com/DrTrogalstaid/Outbreak_Undead_2e_FoundryVYY.git/system.json",
-  "download": "This must link to a .zip file of the current version",
+  "download": "https://github.com/DrTrogalstaid/Outbreak_Undead_2e_FoundryVYY.git/ubud2e.zip",
   "background": "systems/outbreakundead2e/assets/anvil-impact.png",
   "gridDistance": 5,
   "gridUnits": "ft",

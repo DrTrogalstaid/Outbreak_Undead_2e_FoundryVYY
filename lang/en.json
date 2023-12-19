@@ -1,22 +1,22 @@
 {
-  "BOILERPLATE.AbilityStr": "Strength",
-  "BOILERPLATE.AbilityCon": "Constitution",
-  "BOILERPLATE.AbilityDex": "Dexterity",
-  "BOILERPLATE.AbilityInt": "Intelligence",
-  "BOILERPLATE.AbilityWis": "Wisdom",
-  "BOILERPLATE.AbilityCha": "Charisma",
+  "OUTBREAKUNDEAD2E.AbilityStr": "Strength",
+  "OUTBREAKUNDEAD2E.AbilityCon": "Constitution",
+  "OUTBREAKUNDEAD2E.AbilityDex": "Dexterity",
+  "OUTBREAKUNDEAD2E.AbilityInt": "Intelligence",
+  "OUTBREAKUNDEAD2E.AbilityWis": "Wisdom",
+  "OUTBREAKUNDEAD2E.AbilityCha": "Charisma",
 
-  "BOILERPLATE.AbilityStrAbbr": "str",
-  "BOILERPLATE.AbilityConAbbr": "con",
-  "BOILERPLATE.AbilityDexAbbr": "dex",
-  "BOILERPLATE.AbilityIntAbbr": "int",
-  "BOILERPLATE.AbilityWisAbbr": "wis",
-  "BOILERPLATE.AbilityChaAbbr": "cha",
+  "OUTBREAKUNDEAD2E.AbilityStrAbbr": "str",
+  "OUTBREAKUNDEAD2E.AbilityConAbbr": "con",
+  "OUTBREAKUNDEAD2E.AbilityDexAbbr": "dex",
+  "OUTBREAKUNDEAD2E.AbilityIntAbbr": "int",
+  "OUTBREAKUNDEAD2E.AbilityWisAbbr": "wis",
+  "OUTBREAKUNDEAD2E.AbilityChaAbbr": "cha",
 
-  "BOILERPLATE.EffectCreate": "Create Effect",
-  "BOILERPLATE.EffectToggle": "Toggle Effect",
-  "BOILERPLATE.EffectEdit": "Edit Effect",
-  "BOILERPLATE.EffectDelete": "Delete Effect",
+  "OUTBREAKUNDEAD2E.EffectCreate": "Create Effect",
+  "OUTBREAKUNDEAD2E.EffectToggle": "Toggle Effect",
+  "OUTBREAKUNDEAD2E.EffectEdit": "Edit Effect",
+  "OUTBREAKUNDEAD2E.EffectDelete": "Delete Effect",
 
-  "BOILERPLATE.Add": "Add"
+  "OUTBREAKUNDEAD2E.Add": "Add"
 }

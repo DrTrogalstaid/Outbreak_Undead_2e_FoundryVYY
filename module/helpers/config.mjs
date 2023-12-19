@@ -1,23 +1,23 @@
-export const BOILERPLATE = {};
+export const OUTBREAKUNDEAD2E = {};
 
 /**
  * The set of Ability Scores used within the sytem.
  * @type {Object}
  */
- BOILERPLATE.abilities = {
-  "str": "BOILERPLATE.AbilityStr",
-  "dex": "BOILERPLATE.AbilityDex",
-  "con": "BOILERPLATE.AbilityCon",
-  "int": "BOILERPLATE.AbilityInt",
-  "wis": "BOILERPLATE.AbilityWis",
-  "cha": "BOILERPLATE.AbilityCha"
+ OUTBREAKUNDEAD2E.abilities = {
+  "str": "OUTBREAKUNDEAD2E.AbilityStr",
+  "dex": "OUTBREAKUNDEAD2E.AbilityDex",
+  "con": "OUTBREAKUNDEAD2E.AbilityCon",
+  "int": "OUTBREAKUNDEAD2E.AbilityInt",
+  "wis": "OUTBREAKUNDEAD2E.AbilityWis",
+  "cha": "OUTBREAKUNDEAD2E.AbilityCha"
 };
 
-BOILERPLATE.abilityAbbreviations = {
-  "str": "BOILERPLATE.AbilityStrAbbr",
-  "dex": "BOILERPLATE.AbilityDexAbbr",
-  "con": "BOILERPLATE.AbilityConAbbr",
-  "int": "BOILERPLATE.AbilityIntAbbr",
-  "wis": "BOILERPLATE.AbilityWisAbbr",
-  "cha": "BOILERPLATE.AbilityChaAbbr"
+OUTBREAKUNDEAD2E.abilityAbbreviations = {
+  "str": "OUTBREAKUNDEAD2E.AbilityStrAbbr",
+  "dex": "OUTBREAKUNDEAD2E.AbilityDexAbbr",
+  "con": "OUTBREAKUNDEAD2E.AbilityConAbbr",
+  "int": "OUTBREAKUNDEAD2E.AbilityIntAbbr",
+  "wis": "OUTBREAKUNDEAD2E.AbilityWisAbbr",
+  "cha": "OUTBREAKUNDEAD2E.AbilityChaAbbr"
 };
