@@ -10,6 +10,9 @@ export class OutbreakUndead2eActor extends Actor {
     // the following, in order: data reset (to clear active effects),
     // prepareBaseData(), prepareEmbeddedDocuments() (including active effects),
     // prepareDerivedData().
+
+    //TODO: Fiture out if this is needed for the changes and resets of different levels of play (arcade, weekend warrior, etc) .
+
     super.prepareData();
   }
 
@@ -52,8 +55,7 @@ export class OutbreakUndead2eActor extends Actor {
 
     // Loop through ability scores, and add their modifiers to our sheet output.
     for (let [key, ability] of Object.entries(systemData.abilities)) {
-      // Calculate the modifier using d20 rules.
-      ability.mod = (ability.value / 10);
+      ability.mod = Math.floor(ability.value / 10);
     }
   }
 
@@ -85,7 +87,9 @@ export class OutbreakUndead2eActor extends Actor {
    * Prepare character roll data.
    */
   _getCharacterRollData(data) {
-    if (this.type !== 'character') return;
+    if (this.type !== 'character') {
+      return
+    };
 
     // Copy the ability scores to the top level, so that rolls can use
     // formulas like `@str.mod + 4`.

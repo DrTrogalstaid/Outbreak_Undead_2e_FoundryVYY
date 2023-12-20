@@ -7,7 +7,7 @@
   return loadTemplates([
 
     // Actor partials.
-    "systems/outbreakundead2e/templates/actor/parts/actor-features.html",
+    "systems/outbreakundead2e/templates/actor/parts/actor-attributes.html",
     "systems/outbreakundead2e/templates/actor/parts/actor-items.html",
     "systems/outbreakundead2e/templates/actor/parts/actor-spells.html",
     "systems/outbreakundead2e/templates/actor/parts/actor-effects.html",

@@ -13,7 +13,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
       template: "systems/outbreakundead2e/templates/actor/actor-sheet.html",
       width: 600,
       height: 600,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes" }]
     });
   }
 
@@ -83,7 +83,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
   _prepareItems(context) {
     // Initialize containers.
     const gear = [];
-    const features = [];
+    const attributes = [];
     const spells = {
       0: [],
       1: [],
@@ -104,9 +104,9 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
       if (i.type === 'item') {
         gear.push(i);
       }
-      // Append to features.
+      // Append to attributes.
       else if (i.type === 'feature') {
-        features.push(i);
+        attributes.push(i);
       }
       // Append to spells.
       else if (i.type === 'spell') {
@@ -118,7 +118,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
 
     // Assign and return
     context.gear = gear;
-    context.features = features;
+    context.attributes = attributes;
     context.spells = spells;
   }
 
