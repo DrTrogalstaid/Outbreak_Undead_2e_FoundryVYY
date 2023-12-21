@@ -21,7 +21,7 @@
     },
     "character": {
       "templates": ["base"],
-      "attributes": {
+      "skill": {
         "level": {
           "value": 1
         }
