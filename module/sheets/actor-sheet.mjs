@@ -19,7 +19,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/outbreakundead2e/templates/actor/actor-${this.actor.type}-sheet.html`;
+    return `systems/outbreakundead2e/templates/actor/actor-${this.actor.type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */
@@ -215,7 +215,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
 
     // Handle rolls that supply the formula directly.
     if (dataset.roll) {
-      let label = dataset.label ? `[ability] ${dataset.label}` : '';
+      let label = dataset.label ? `${dataset.label}` : '';
       let roll = new Roll(dataset.roll, this.actor.getRollData());
       roll.toMessage({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
