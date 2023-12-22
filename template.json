@@ -11,6 +11,9 @@
           "min": 0,
           "max": 10
         },
+        "damage_threshold":{
+          "value": 0
+        },
         "power": {
           "value": 5,
           "min": 0,
@@ -38,6 +41,26 @@
         },
         "wil": {
           "value": 0
+        }
+      },
+      "survival_points": 0,
+      "gestalt_level": 0,
+      "competence_points": 0,
+      "injuries": {
+        "hit_point_1":{
+          "is_injured": "Flase"
+        },
+        "hit_point_2":{
+          "is_injured": "False"
+        },
+        "hit_point_3":{
+          "is_injured": "False"
+        },
+        "hit_point_4":{
+          "is_injured": "False"
+        },
+        "hit_point_5":{
+          "is_injured": "False"
         }
       }
     },

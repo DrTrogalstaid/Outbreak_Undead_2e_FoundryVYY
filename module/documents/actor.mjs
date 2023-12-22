@@ -57,6 +57,10 @@ export class OutbreakUndead2eActor extends Actor {
     for (let [key, ability] of Object.entries(systemData.abilities)) {
       ability.mod = Math.floor(ability.value / 10);
     }
+
+    // Set Damage Threshold based on str.mod and wil.mod
+    systemData.damage_threshold = (systemData.abilities.str.mod + systemData.abilities.wil.mod);
+
   }
 
   /**
@@ -97,11 +101,6 @@ export class OutbreakUndead2eActor extends Actor {
       for (let [k, v] of Object.entries(data.abilities)) {
         data[k] = foundry.utils.deepClone(v);
       }
-    }
-
-    // Add level for easier access, or fall back to 0.
-    if (data.attributes.level) {
-      data.lvl = data.attributes.level.value ?? 0;
     }
   }
 

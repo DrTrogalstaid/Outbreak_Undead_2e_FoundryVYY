@@ -1,0 +1,59 @@
+<h1 class="flex-group-center">Vitality</h1>
+<div class="vitality flexrow flex-group-center">
+    <div class="injuries flexcol">
+        <h3>Injuries</h3>
+        
+         <!--Injuries-->
+        <div class="flexcol flex-group-left">
+            {{#each system.injuries as |injury key|}}
+                <div class="flexrow flex-group-left">
+                    <label for="{{injury.is_injured}}"></label>
+                    <input type="checkbox" name="{{injury.is_injured}}" value="{{injury.is_injured}}"/>
+                </div>
+            {{/each}}
+        </div>
+         
+    </div>
+    <!-- Damage Threshold -->
+    <div class="flexcol">
+        <h3>Damage Threshold</h3>
+        <div class="damage_threshold flexrow flex-group-center">
+            <!-- Number from Ability Modifiers -->
+            <div class="flexcol flex-group-center">
+                <label for="system.damage_threshold">SB + WB</label>
+                <input type="text" name="system.damage_threshold" readonly value="{{system.damage_threshold}}" data-dtype="Number"/>
+            </div>
+            <div>+</div>
+            <!-- Number from Bonus -->
+            <div class="flexcol flex-group-center">   
+                <label for="system.damage_threshold.bouns">Bonus</label>
+                <input type="text" name="system.damage_threshold" readonly value="{{system.damage_threshold.bonus}}" data-dtype="Number"/> 
+            </div>
+         </div>
+        <!-- Total Damage Threshold -->  
+        <div class="damage_threshold_total flexcol flex-group-center">
+            <label for="system.damage_threshold.total"></label>
+            <input type="text" name="system.damage_threshold.total" readonly value="{{system.damage_threshold.total}}" data-dtype="Number"/> 
+        </div>
+    </div>
+    
+</div>
+
+
+<!-- index.hbs 
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Editable Box</title>
+</head>
+<body>
+    <div class="flexcol flex-group-center">
+        <label for="boxValue">Damage Threshold</label>
+        <input type="text" id="boxValue" readonly value="{{boxValue}}">
+    </div>
+</body>
+</html>
+
