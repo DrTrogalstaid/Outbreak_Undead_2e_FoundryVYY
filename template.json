@@ -16,11 +16,6 @@
           "bonus": 0,
           "total": 0
         },
-        "power": {
-          "value": 5,
-          "min": 0,
-          "max": 5
-        },
         "biography": ""
       }
     },

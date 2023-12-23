@@ -54,7 +54,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     context.rollData = context.actor.getRollData();
 
     // Prepare active effects
-    context.effects = prepareActiveEffectCategories(this.actor.effects);
+    //context.effects = prepareActiveEffectCategories(this.actor.effects);
 
     return context;
   }

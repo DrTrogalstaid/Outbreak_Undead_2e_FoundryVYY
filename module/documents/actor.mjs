@@ -62,7 +62,6 @@ export class OutbreakUndead2eActor extends Actor {
     systemData.damage_threshold.spew = (systemData.abilities.str.mod + systemData.abilities.wil.mod);
     systemData.damage_threshold.total = (systemData.damage_threshold.spew + systemData.damage_threshold.bonus);
 
-
     // Set Morale
     systemData.morale.spew = (systemData.abilities.wil.mod + systemData.abilities.emp.mod);
     systemData.morale.total = (systemData.morale.spew + systemData.morale.bonus);
@@ -77,7 +76,7 @@ export class OutbreakUndead2eActor extends Actor {
 
     // Make modifications to data here. For example:
     const systemData = actorData.system;
-    systemData.xp = (systemData.cr * systemData.cr) * 100;
+    //systemData.xp = (systemData.cr * systemData.cr) * 100;
   }
 
   /**
