@@ -96,6 +96,11 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
       8: [],
       9: []
     };
+    const skills = {
+      Basic: [],
+      Trained: [],
+      Expert: []
+    };
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -112,6 +117,12 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
       else if (i.type === 'spell') {
         if (i.system.spellLevel != undefined) {
           spells[i.system.spellLevel].push(i);
+        }
+      }
+      // Append to skills.
+      else if (i.type === 'spell') {
+        if (i.system.skill_level != undefined) {
+          skills[i.system.skill_leve].push(i);
         }
       }
     }
