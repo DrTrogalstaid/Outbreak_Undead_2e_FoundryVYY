@@ -10,7 +10,7 @@
       <div class="abilities grid grid-4col">  
           {{#each system.abilities as |ability key|}}
           <div class="flexcol flex-group-center">
-            <img class="item" src="systems/outbreakundead2e/assets/icons/spew/{{ability.label}}.png" height="56" />
+            <img class="item sheet-image-no-border" src="systems/outbreakundead2e/assets/icons/spew/{{ability.label}}.png" height="56" />
             <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d100+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{ability.label}}</label>
             <div class="flexrow">
               <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>

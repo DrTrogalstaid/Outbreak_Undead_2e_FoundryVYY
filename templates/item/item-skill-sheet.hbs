@@ -1,0 +1,64 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="description">
+      {{editor system.skill.description target="system.skill.description" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Details Tab --}}
+    <div class="tab details" data-group="primary" data-tab="details">
+      {{!-- As you add new fields, add them in here! --}}
+      <!--Name-->
+      <div class="resource flexrow">
+        <label class="resource-label">Name:</label>
+        <input type="text" name="system.skill.name" value="{{system.skill.name}}" data-dtype="String"/>
+      </div>
+      <!--category-->
+      <div class="resource flexrow">
+        <label class="resource-label">Category:</label>
+        <input type="text" name="system.skill.category" value="{{system.skill.category}}" data-dtype="String"/>
+      </div>
+      <!--bace_percent-->
+      <div class="resource flexrow">
+        <label class="resource-label">Bace Percent Primary:</label>
+        <input type="text" name="system.skill.bace_percent.primary" value="{{system.skill.bace_percent.primary}}" data-dtype="String"/>
+      </div>
+      <div class="resource flexrow">
+        <label class="resource-label">Bace Percent Bonus:</label>
+        <input type="text" name="system.skill.bace_percent.bonus" value="{{system.skill.bace_percent.bonus}}" data-dtype="String"/>
+      </div>
+      <!--dice_pool-->
+      <div class="resource flexrow">
+        <div>TODO: Dice Pool</div>
+      </div>
+      <!--time-->
+      <div class="resource flexrow">
+        <label class="resource-label">Time:</label>
+        <input type="text" name="system.skill.time" value="{{system.skill.time}}" data-dtype="Number"/>
+      </div>
+      <!--triggered_effects-->
+      <div class="resource flexrow">
+        <div>TODO: Triggered Effects</div>
+      </div>
+      <!--modifieres-->
+      <div class="resource flexrow">
+        <div>TODO: Modifiers</div>
+      </div>
+    </div>
+  </section>
+</form>

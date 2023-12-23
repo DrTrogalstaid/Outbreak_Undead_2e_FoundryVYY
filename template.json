@@ -111,7 +111,27 @@
     },
     "skill": {
       "templates": ["base"],
-      "skill_level": 1
+      "name": "",
+      "abbreviation": "",
+      "category": "",
+      "bace_percent": {
+        "primary": "",
+        "bonus": ""
+      },
+      "dice_pool": {
+        "percentile": 0,
+        "speed": 0,
+        "damage": 0,
+        "difficulty": 0
+      },
+      "time": 0,
+      "description": "",
+      "triggered_effects": {
+        "degrees_of_success": 0,
+        "degrees_of_falure": 0,
+        "effect": ""
+      },
+      "modifieres": 0
     }
   }
 }
