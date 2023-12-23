@@ -34,7 +34,21 @@
       "path": "lang/en.json"
     }
   ],
-  "packs": [],
+  "packs": [
+    {
+      "name": "skills",
+      "label": "Skills",
+      "path": "packs/skills",
+      "type": "Item",
+      "banner": "systems/outbreakundead2e/assets/compendium-banners/skills.png",
+      "system": "outbreakundead2e",
+      "ownershop": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flats": {}
+    }
+  ],
   "packFolders": [],
   "socket": false,
   "manifest": "https://github.com/DrTrogalstaid/Outbreak_Undead_2e_FoundryVYY.git/system.json",
