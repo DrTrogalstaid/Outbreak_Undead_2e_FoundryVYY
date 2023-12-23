@@ -29,6 +29,15 @@
   flex: 2;
 }
 
+.flex-no-border {
+  border: 0px;
+}
+
+.flex-border {
+  border: 3px;
+}
+
+
 // Alignment styles.
 .align-left {
   justify-content: flex-start;

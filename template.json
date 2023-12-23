@@ -12,7 +12,9 @@
           "max": 10
         },
         "damage_threshold":{
-          "value": 0
+          "spew": 0,
+          "bonus": 0,
+          "total": 0
         },
         "power": {
           "value": 5,
@@ -48,20 +50,43 @@
       "competence_points": 0,
       "injuries": {
         "hit_point_1":{
-          "is_injured": "Flase"
+          "is_injured": "True",
+          "description": ""
         },
         "hit_point_2":{
-          "is_injured": "False"
+          "is_injured": "False",
+          "description": ""
         },
         "hit_point_3":{
-          "is_injured": "False"
+          "is_injured": "True",
+          "description": ""
         },
         "hit_point_4":{
-          "is_injured": "False"
+          "is_injured": "False",
+          "description": ""
         },
         "hit_point_5":{
-          "is_injured": "False"
+          "is_injured": "False",
+          "description": ""
         }
+      },
+      "viral_points": 0,
+      "symptoms": {
+        "string_1": "",
+        "string_2": "",
+        "string_3": "",
+        "string_4": ""
+      },
+      "morale": {
+        "spew": 0,
+        "bonus": 0,
+        "total": 0
+      },
+      "coping_mechanisms": {
+        "mechanism_1": "",
+        "mechanism_2": "",
+        "mechanism_3": "",
+        "mechanism_4": ""
       }
     },
     "npc": {

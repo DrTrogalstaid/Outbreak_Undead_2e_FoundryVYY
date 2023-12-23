@@ -1,59 +1,99 @@
 <h1 class="flex-group-center">Vitality</h1>
-<div class="vitality flexrow flex-group-center">
-    <div class="injuries flexcol">
-        <h3>Injuries</h3>
-        
-         <!--Injuries-->
-        <div class="flexcol flex-group-left">
-            {{#each system.injuries as |injury key|}}
-                <div class="flexrow flex-group-left">
-                    <label for="{{injury.is_injured}}"></label>
-                    <input type="checkbox" name="{{injury.is_injured}}" value="{{injury.is_injured}}"/>
+<div class="vitality flexcol">
+    <!--Injuries and Damage Threshold-->
+    <div class="flexrow flex-group-center">
+        <!--Injuries-->
+        <div class="injuries flexcol">
+            <h3>Injuries</h3>
+            <div class="flexcol flex-group-left">
+                {{#each system.injuries as |injury key|}}
+                    <div class="flexrow flex-group-left">
+                        <label for="system.injuries.{{key}}.is_injured"></label>
+                        <input type="checkbox" name="system.injuries.{{key}}.is_injured" value="{{key.is_injured}}"/>
+                        <label for="system.injuries.{{key}}.description"></label>
+                        <input type="text" name="system.injuries.{{key}}.description" class="sheet-line-input" value="{{injury.description}}" data-dtype="String" />
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <!-- Damage Threshold -->
+        <div class="flexcol">
+            <h3>Damage Threshold</h3>
+            <div class="damage_threshold flexrow flex-group-center">
+                <!-- Number from Ability Modifiers -->
+                <div class="flexcol flex-group-center">
+                    <label for="system.damage_threshold.spew">Sb + Wb</label>
+                    <input type="text" name="system.damage_threshold.spew" class="sheet-box-border" readonly value="{{system.damage_threshold.spew}}" data-dtype="Number"/>
                 </div>
-            {{/each}}
-        </div>
-         
-    </div>
-    <!-- Damage Threshold -->
-    <div class="flexcol">
-        <h3>Damage Threshold</h3>
-        <div class="damage_threshold flexrow flex-group-center">
-            <!-- Number from Ability Modifiers -->
-            <div class="flexcol flex-group-center">
-                <label for="system.damage_threshold">SB + WB</label>
-                <input type="text" name="system.damage_threshold" readonly value="{{system.damage_threshold}}" data-dtype="Number"/>
+                <div>+</div>
+                <!-- Number from Bonus -->
+                <div class="flexcol flex-group-center">   
+                    <label for="system.damage_threshold.bouns">Bonus</label>
+                    <input type="text" name="system.damage_threshold.bonus" readonly value="{{system.damage_threshold.bonus}}" data-dtype="Number"/> 
+                </div>
+             </div>
+            <!-- Total Damage Threshold -->  
+            <div class="damage_threshold_total flexrow">
+                <div class="flexcol">
+                    <div>Total</div>
+                    <label for="system.damage_threshold.total"></label>
+                    <input type="text" name="system.damage_threshold.total" readonly value="{{system.damage_threshold.total}}" data-dtype="Number"/> 
+                </div>
             </div>
-            <div>+</div>
-            <!-- Number from Bonus -->
-            <div class="flexcol flex-group-center">   
-                <label for="system.damage_threshold.bouns">Bonus</label>
-                <input type="text" name="system.damage_threshold" readonly value="{{system.damage_threshold.bonus}}" data-dtype="Number"/> 
-            </div>
-         </div>
-        <!-- Total Damage Threshold -->  
-        <div class="damage_threshold_total flexcol flex-group-center">
-            <label for="system.damage_threshold.total"></label>
-            <input type="text" name="system.damage_threshold.total" readonly value="{{system.damage_threshold.total}}" data-dtype="Number"/> 
         </div>
     </div>
-    
+    <div class="flexrow flex-group-center">
+        <!--Viral-->
+        <div class="flexcol">
+            <h3>Viral</h3>
+            <!--Viral Points-->
+            <div class="viral_points">
+                <!--TODO: Make this a checkbox system. Idk how to do this yet, so I am just leaving this as a number box-->
+                <label for="system.viral_points"></label>
+                <input type="text" name="system.viral_points" value="{{system.viral_points}}" data-dtype="Number" />
+            </div>
+            <!--Symptoms-->
+            <h3>Symptoms</h3>
+            <div class="flexcol">
+                {{#each system.symptoms as |symptom key|}}
+                    <label for="system.symptoms.{{key}}"></label>
+                    <input type="next" name="system.symptoms.{{key}}" class="sheet-line-input" value="{{symptom}}" data-dtype="String" />
+                {{/each}}
+            </div>
+        </div>
+
+        <!--Psyche-->
+        <div class="flexcol">
+            <h3>Psyche</h3>
+            <!--Morale-->
+            <div class="flexrow flex-group-center">
+                <div>Morale </div>
+                <!--TODO: Smiley Face-->
+                <div class="flex-col flex-group-center">
+                    <label for="system.morale.spew">Wb + Eb</label>
+                    <input type="text" name="system.morale.spew" class="sheet-box-border" readonly value="{{system.morale.spew}}"></input>
+                </div>
+                <div>+</div>
+                <div class="flex-col flex-group-center">
+                    <label for="system.morale.bonus">Bonus</label>
+                    <input type="text" name="system.morale.bonus" class="sheet-box-border" readonly value="{{system.morale.bonus}}"></input>
+                </div>
+                <div>=</div>
+                <div class="flex-col flex-group-center">
+                    <label for="system.morale.total">Total</label>
+                    <input type="text" name="system.morale.total" class="sheet-box-border" readonly value="{{system.morale.total}}"></input>
+                </div>
+            </div>
+            <!--Coping Mechanisms-->
+            <div class="flexcol">
+                <h3>Coping Mechanisms</h3>
+                {{#each system.coping_mechanisms as |coping_mechanism key|}}
+                    <label for="system.coping_mechanisms.{{key}}"></label>
+                    <input type="next" name="system.coping_mechanisms.{{key}}" class="sheet-line-input" value="{{coping_mechanism}}" data-dtype="String" />
+                {{/each}}
+            </div>
+        </div>
+
+    </div>
+
 </div>
-
-
-<!-- index.hbs 
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <title>Editable Box</title>
-</head>
-<body>
-    <div class="flexcol flex-group-center">
-        <label for="boxValue">Damage Threshold</label>
-        <input type="text" id="boxValue" readonly value="{{boxValue}}">
-    </div>
-</body>
-</html>
-

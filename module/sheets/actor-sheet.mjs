@@ -11,8 +11,8 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["outbreakundead2e", "sheet", "actor"],
       template: "systems/outbreakundead2e/templates/actor/actor-sheet.html",
-      width: 600,
-      height: 600,
+      width: 640,
+      height: 700,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes" }]
     });
   }
