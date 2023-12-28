@@ -13,7 +13,7 @@
         },
         "damage_threshold":{
           "spew": 0,
-          "bonus": 0,
+          "supporting": 0,
           "total": 0
         },
         "biography": ""
@@ -21,11 +21,6 @@
     },
     "character": {
       "templates": ["base"],
-      "skill": {
-        "level": {
-          "value": 1
-        }
-      },
       "abilities": {
         "str": {
           "value": 0
@@ -43,6 +38,332 @@
       "survival_points": 0,
       "gestalt_level": 0,
       "competence_points": 0,
+      "skills": {
+        "basic": {
+          "balance": {
+            "name": "Balance",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "brawl": {
+            "name": "Brawl",
+            "advancement": 0,
+            "primary": "strength",
+            "supporting": "perception"
+          },
+          "climb": {
+            "name": "Climb",
+            "advancement": 0,
+            "primary": "strength",
+            "supporting": "willpower"
+          },
+          "composure": {
+            "name": "Composure",
+            "advancement": 0,
+            "primary": "willpower",
+            "supporting": "empathy"
+          },
+          "dodge": {
+            "name": "Dodge",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "strength"
+          },
+          "endurance": {
+            "name": "Endurance",
+            "advancement": 0,
+            "primary": "strength",
+            "supporting": "willpower"
+          },
+          "expression": {
+            "name": "Expression",
+            "advancement": 0,
+            "primary": "empathy",
+            "supporting": "perception"
+          },
+          "grapple": {
+            "name": "Grapple",
+            "advancement": 0,
+            "primary": "strength",
+            "supporting": "willpower"
+          },
+          "hold": {
+            "name": "Hold",
+            "advancement": 0,
+            "primary": "willpower",
+            "supporting": "perception"
+          },
+          "jump_leap": {
+            "name": "Jump/Leap",
+            "advancement": 0,
+            "primary": "strength",
+            "supporting": "willpower"
+          },
+          "lift_pull": {
+            "name": "Lift/Pull",
+            "advancement": 0,
+            "primary": "strength",
+            "supporting": "willpower"
+          },
+          "resist_pain": {
+            "name": "Resist Pain",
+            "advancement": 0,
+            "primary": "willpower",
+            "supporting": "strength"
+          },
+          "search": {
+            "name": "Search",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "spot_listen": {
+            "name": "Spot/Listen",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "stealth": {
+            "name": "Stealth",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          }
+        },
+        "trained": {
+          "bow_crossbow": {
+            "name": "Bow",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "strength"
+          },
+          "calm_other": {
+            "name": "Calm Other",
+            "advancement": 0,
+            "primary": "empathy",
+            "supporting": "willpower"
+          },
+          "diplomacy": {
+            "name": "Diplomacy",
+            "advancement": 0,
+            "primary": "empathy",
+            "supporting": "empathy"
+          },
+          "barter_bribe": {
+            "name": "Barter",
+            "advancement": 0,
+            "primary": "empathy",
+            "supporting": "willpower"
+          },
+          "command": {
+            "name": "Command",
+            "advancement": 0,
+            "primary": "empathy",
+            "supporting": "willpower"
+          },
+          "determine_motives": {
+            "name": "Det. Motives",
+            "advancement": 0,
+            "primary": "empathy",
+            "supporting": "perception"
+          },
+          "intimidate": {
+            "name": "Intimidate",
+            "advancement": 0,
+            "primary": "empathy",
+            "supporting": "strength"
+          },
+          "persuade": {
+            "name": "Persuade",
+            "advancement": 0,
+            "primary": "empathy",
+            "supporting": "perception"
+          },
+          "digital_systems": {
+            "name": "Digi. Systems",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "long_gun": {
+            "name": "Long G.",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "pistol": {
+            "name": "Pistol",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "first_aid": {
+            "name": "First Aid",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "melee_attack_bludgeoning": {
+            "name": "M. Attack [BL]",
+            "advancement": 0,
+            "primary": "strength",
+            "supporting": "perception"
+          },
+          "melee_attack_piercing": {
+            "name": "M. Attack [PI]",
+            "advancement": 0,
+            "primary": "strength",
+            "supporting": "perception"
+          },
+          "melee_attack_slashing": {
+            "name": "M. Attack [SL]",
+            "advancement": 0,
+            "primary": "strength",
+            "supporting": "perception"
+          },
+          "navigation": {
+            "name": "Navigation",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "swim": {
+            "name": "Swim",
+            "advancement": 0,
+            "primary": "strength",
+            "supporting": "willpower"
+          },
+          "throw": {
+            "name": "Throw",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "strength"
+          }
+        },
+        "expert": {
+          "advanced_medicine": {
+            "name": "Adv. Medicine",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "craft_construct_engineer": {
+            "name": "Cnst./Eng.",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "": {
+            "name": "",
+            "advancement": 0,
+            "primary": "",
+            "supporting": ""
+          },
+          "": {
+            "name": "",
+            "advancement": 0,
+            "primary": "",
+            "supporting": ""
+          },
+          "": {
+            "name": "",
+            "advancement": 0,
+            "primary": "",
+            "supporting": ""
+          },
+          "": {
+            "name": "",
+            "advancement": 0,
+            "primary": "",
+            "supporting": ""
+          },
+          "martial_arts": {
+            "name": "Martial Arts",
+            "advancement": 0,
+            "primary": "strength",
+            "supporting": "perception"
+          },
+          "pilot": {
+            "name": "Poilot",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "": {
+            "name": "",
+            "advancement": 0,
+            "primary": "",
+            "supporting": ""
+          },
+          "": {
+            "name": "",
+            "advancement": 0,
+            "primary": "",
+            "supporting": ""
+          },
+          "ride": {
+            "name": "Ride",
+            "advancement": 0,
+            "primary": "empathy",
+            "supporting": "willpower"
+          },
+          "": {
+            "name": "",
+            "advancement": 0,
+            "primary": "",
+            "supporting": ""
+          },
+          "science": {
+            "name": "Science",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "": {
+            "name": "",
+            "advancement": 0,
+            "primary": "",
+            "supporting": ""
+          },
+          "": {
+            "name": "",
+            "advancement": 0,
+            "primary": "",
+            "supporting": ""
+          },
+          "survival": {
+            "name": "Survival",
+            "advancement": 0,
+            "primary": "perception",
+            "supporting": "willpower"
+          },
+          "": {
+            "name": "",
+            "advancement": 0,
+            "primary": "",
+            "supporting": ""
+          },
+          "": {
+            "name": "",
+            "advancement": 0,
+            "primary": "",
+            "supporting": ""
+          },
+          "": {
+            "name": "",
+            "advancement": 0,
+            "primary": "",
+            "supporting": ""
+          },
+          "toughness": {
+            "name": "Toughness",
+            "advancement": 0,
+            "primary": "strength",
+            "supporting": "willpower"
+          }
+        }
+      },
       "injuries": {
         "hit_point_1":{
           "is_injured": "True",
@@ -74,7 +395,7 @@
       },
       "morale": {
         "spew": 0,
-        "bonus": 0,
+        "supporting": 0,
         "total": 0
       },
       "coping_mechanisms": {
@@ -116,7 +437,7 @@
       "category": "",
       "bace_percent": {
         "primary": "",
-        "bonus": ""
+        "supporting": ""
       },
       "dice_pool": {
         "percentile": 0,

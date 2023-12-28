@@ -313,6 +313,11 @@
   background-color: none;
 }
 
+.outbreakundead2e .sheet-image-skill-supporting {
+  transform:translateY(8px);
+  opacity: 0.5;
+}
+
 .outbreakundead2e .sheet-tabs {
   -webkit-box-flex: 0;
   -ms-flex: 0;

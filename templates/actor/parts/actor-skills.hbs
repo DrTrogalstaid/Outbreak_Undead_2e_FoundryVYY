@@ -1,8 +1,102 @@
 <h1 class="flexcol flex-group-center">Skills</h1>
   <div class="flex-group-center">
-    <h3>Basic Skill Checks</h3>
+    <h3>Basic Skill Checks</h3> 
+      <div class="flexrow ">
+        <div class="flexcol basic_skills_1">
+      {{#each system.skills.basic as |skill key|}}          
+        {{!This is a weird one, but this creates a second col of skills when it hits grapple(the last item in the first col)}}
+        {{#if (eq skill.name "Hold") }}
+        </div>
+        <div class="flexcol basic_skills_2">
+        {{/if}}
+        <li class="flexrow">
+          <!--Images for Primary and Supporting stats-->
+          <img class="item sheet-image-no-border flex0" src="systems/outbreakundead2e/assets/icons/spew/{{skill.primary}}.png" height="16" width="16"/>
+          <img class="item sheet-image-no-border flex0 sheet-image-skill-supporting" src="systems/outbreakundead2e/assets/icons/spew/{{skill.supporting}}.png" height="16" width="16" />
+          <!--Advancement-->
+          <!--TODO: Change this, so the number changes into an image??-->
+          <label class="flex0" for="system.skills.basic.{{key}}.advancement"></label>
+          <input class="flex0" type="text" name="system.skills.basic.{{key}}.advancement" value="{{skill.advancement}}" data-dtype="Number" />
+          <!--Name-->
+          <div class="flexrow">
+            <div class="flex0">{</div>
+            <div bold="true">{{skill.name}}</div>
+            <div class="flex0">%}</div>
+          </div>
+          <!--Advancement Bonus-->
+          <label class="flex0" for="system.skills.basic.{{key}}.bonus"></label>
+          <input class="flex0" type="text" name="system.skills.basic.{{key}}.bonus" readonly value="{{skill.bonus}}" data-dtype="String" />
+          <!--Skill Check % Total-->
+          <label class="flex0" for="system.skills.basic.{{key}}.base"></label>
+          <input type="text" name="system.skills.basic.{{key}}.base" readonly value="{% {{skill.base}} }" data-dtype="String" />
+        </li>
+      {{/each}}
+        </div>
+      </div>
     <h3>Trained Skill Checks</h3>
+      <div class="flexrow">
+        <div class="flexcol trained_skills_1">
+      {{#each system.skills.trained as |skill key|}}
+        {{#if (eq skill.name "Long G.")}}
+        </div>
+        <div class="flexcol trained_skills_2">
+        {{/if}}
+      <li class="flexrow">
+        <!--Images for Primary and Supporting stats-->
+          <img class="item sheet-image-no-border flex0" src="systems/outbreakundead2e/assets/icons/spew/{{skill.primary}}.png" height="16" width="16"/>
+          <img class="item sheet-image-no-border flex0 sheet-image-skill-supporting" src="systems/outbreakundead2e/assets/icons/spew/{{skill.supporting}}.png" height="16" width="16" />
+          <!--Advancement-->
+          <!--TODO: Change this, so the number changes into an image??-->
+          <label class="flex0" for="system.skills.basic.{{key}}.advancement"></label>
+          <input class="flex0" type="text" name="system.skills.basic.{{key}}.advancement" value="{{skill.advancement}}" data-dtype="Number" />
+          <!--Name-->
+          <div class="flexrow">
+            <div class="flex0">{</div>
+            <div bold="true">{{skill.name}}</div>
+            <div class="flex0">%}</div>
+          </div>
+          <!--Advancement Bonus-->
+          <label class="flex0" for="system.skills.basic.{{key}}.bonus"></label>
+          <input class="flex0" type="text" name="system.skills.basic.{{key}}.bonus" readonly value="{{skill.bonus}}" data-dtype="String" />
+          <!--Skill Check % Total-->
+          <label class="flex0" for="system.skills.basic.{{key}}.base"></label>
+          <input type="text" name="system.skills.basic.{{key}}.base" readonly value="{% {{skill.base}} }" data-dtype="String" />
+      </li>
+      {{/each}}    
+        </div>
+      </div>
     <h3>Expert Skill Checks</h3>
+          <div class="flexrow">
+        <div class="flexcol expert_skills_1">
+      {{#each system.skills.expert as |skill key|}}
+        {{#if (eq skill.name "Ride")}}
+        </div>
+        <div class="flexcol trained_skills_2">
+        {{/if}}
+      <li class="flexrow">
+        <!--Images for Primary and Supporting stats-->
+          <img class="item sheet-image-no-border flex0" src="systems/outbreakundead2e/assets/icons/spew/{{skill.primary}}.png" height="16" width="16"/>
+          <img class="item sheet-image-no-border flex0 sheet-image-skill-supporting" src="systems/outbreakundead2e/assets/icons/spew/{{skill.supporting}}.png" height="16" width="16" />
+          <!--Advancement-->
+          <!--TODO: Change this, so the number changes into an image??-->
+          <label class="flex0" for="system.skills.basic.{{key}}.advancement"></label>
+          <input class="flex0" type="text" name="system.skills.basic.{{key}}.advancement" value="{{skill.advancement}}" data-dtype="Number" />
+          <!--Name-->
+          <div class="flexrow">
+            <div class="flex0">{</div>
+            <div bold="true">{{skill.name}}</div>
+            <div class="flex0">%}</div>
+          </div>
+          <!--Advancement Bonus-->
+          <label class="flex0" for="system.skills.basic.{{key}}.bonus"></label>
+          <input class="flex0" type="text" name="system.skills.basic.{{key}}.bonus" readonly value="{{skill.bonus}}" data-dtype="String" />
+          <!--Skill Check % Total-->
+          <label class="flex0" for="system.skills.basic.{{key}}.base"></label>
+          <input type="text" name="system.skills.basic.{{key}}.base" readonly value="{% {{skill.base}} }" data-dtype="String" />
+      </li>
+      {{/each}}    
+        </div>
+      </div>
   </div>
 
 

@@ -46,7 +46,8 @@ export class OutbreakUndead2eActor extends Actor {
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
-    if (actorData.type !== 'character') {
+    if (actorData.type !== 'character') 
+    {
       return;
     }
 
@@ -54,7 +55,9 @@ export class OutbreakUndead2eActor extends Actor {
     const systemData = actorData.system;
 
     // Loop through ability scores, and add their modifiers to our sheet output.
-    for (let [key, ability] of Object.entries(systemData.abilities)) {
+    // TODO: Change abilities to "spew" 
+    for (let [key, ability] of Object.entries(systemData.abilities)) 
+    {
       ability.mod = Math.floor(ability.value / 10);
     }
 
@@ -65,6 +68,49 @@ export class OutbreakUndead2eActor extends Actor {
     // Set Morale
     systemData.morale.spew = (systemData.abilities.wil.mod + systemData.abilities.emp.mod);
     systemData.morale.total = (systemData.morale.spew + systemData.morale.bonus);
+
+    // Basic Skills
+    for (let [key, skill] of Object.entries(systemData.skills.basic))
+    {
+      switch (skill.primary)
+      {
+        case "strength":
+          skill.base = systemData.abilities.str.value;
+          break; 
+        case "perception":
+          skill.base = systemData.abilities.per.value;
+          break; 
+        case "empathy":
+          skill.base = systemData.abilities.emp.value;
+          break; 
+        case "willpower":
+          skill.base = systemData.abilities.wil.value;
+          break; 
+      }
+
+      switch (skill.supporting)
+      {
+        case "strength":
+          skill.base += systemData.abilities.str.mod; 
+          break; 
+        case "perception":
+          skill.base += systemData.abilities.per.mod;
+          break; 
+        case "empathy":
+          skill.base += systemData.abilities.emp.mod;
+          break; 
+        case "willpower":
+          skill.base += systemData.abilities.wil.mod;
+          break; 
+      }
+      //TODO: Add bonus based on advancement level
+      if (skill.advancement == 0)
+      {
+        skill.bonus = 0;
+      }
+
+    }
+
 
   }
 

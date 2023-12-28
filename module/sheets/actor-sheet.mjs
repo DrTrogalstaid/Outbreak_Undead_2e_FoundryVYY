@@ -13,7 +13,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
       template: "systems/outbreakundead2e/templates/actor/actor-sheet.html",
       width: 640,
       height: 700,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
     });
   }
 

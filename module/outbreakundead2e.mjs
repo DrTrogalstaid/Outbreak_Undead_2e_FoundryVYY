@@ -23,7 +23,7 @@ Hooks.once('init', async function() {
   };
 
   // Add custom constants for configuration.
-  CONFIG.OUTBREAKUNDEAD2E = OUTBREAKUNDEAD2E;
+  CONFIG.OUTBREAKUNDEAD2E = OUTBREAKUNDEAD2E;  
 
   /**
    * Set an initiative formula for the system
