@@ -7,6 +7,7 @@
   return loadTemplates([
 
     // Actor partials.
+    "systems/outbreakundead2e/templates/actor/parts/actor-survival-gestalt-compitence.hbs",
     "systems/outbreakundead2e/templates/actor/parts/actor-skills.hbs",
     "systems/outbreakundead2e/templates/actor/parts/actor-vitality.hbs",
     "systems/outbreakundead2e/templates/actor/parts/actor-items.html",

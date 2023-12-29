@@ -1,5 +1,4 @@
 <form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
-
   {{!-- Sheet Header --}}
   <header class="sheet-header">
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
@@ -7,7 +6,7 @@
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
       
       <!-- SPEW Attributes-->  
-      <div class="abilities grid grid-4col">  
+      <div class="abilities flexrow">  
           {{#each system.abilities as |ability key|}}
           <div class="flexcol flex-group-center">
             <img class="item sheet-image-no-border" src="systems/outbreakundead2e/assets/icons/spew/{{ability.label}}.png" height="56" />
@@ -19,34 +18,11 @@
           </div>
           {{/each}}
       </div>  
-
-      <!--Survival Points, Gestalt Level, and Competence Points-->
-      <div class="resources grid grid-3col grid-border">
-        <div class="resource flex-group-center">
-          <div class="resource-content flexrow flex-center flex-between">
-            <label for="system.survival_points" class="resource-label">Survival Points</label>
-            <input type="text" name="system.survival_points" value="{{system.survival_points}}" data-dtype="Number"/>
-            <!--<input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>-->
-          </div>
-        </div>
-
-        <div class="resource flex-group-center">
-          <div class="resource-content flexrow flex-center flex-between">
-            <label for="system.gestalt_level" class="resource-label">Gestalt Level</label>
-            <input type="text" name="system.gestalt_level" value="{{system.gestalt_level}}" data-dtype="Number"/>
-          </div>
-        </div>
-
-        <div class="resource flex-group-center">
-          <div class="resource-content flexrow flex-center flex-between">
-            <label for="system.competence_points" class="resource-label">Competence Points</label>
-            <input type="text" name="system.competence_points" value="{{system.competence_points}}" data-dtype="Number"/>
-          </div>
-        </div>
-
-      </div>
     </div>
   </header>
+  
+  <!--Survival Points, Gestalt Level, and Competence Points-->
+  {{> "systems/outbreakundead2e/templates/actor/parts/actor-survival-gestalt-compitence.hbs"}}
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">

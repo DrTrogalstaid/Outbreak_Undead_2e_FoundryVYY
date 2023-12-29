@@ -313,6 +313,18 @@
   background-color: none;
 }
 
+.outbreakundead2e .sheet-image-in-box {
+  opacity: 0.7;
+  height: 24px;
+  width: 24px;
+}
+
+.outbreakundead2e .sheet-image-in-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
 .outbreakundead2e .sheet-image-skill-supporting {
   transform:translateY(8px);
   opacity: 0.5;
