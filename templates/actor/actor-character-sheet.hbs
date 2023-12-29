@@ -29,7 +29,10 @@
     {{!-- Default tab is specified in actor-sheet.mjs --}}
     <a class="item" data-tab="skills">Skills</a>
     <a class="item" data-tab="vitality">Vitality</a>
-    <a class="item" data-tab="items">Items</a>
+    <a class="item" data-tab="training">Training Bonus</a>
+    <a class="item" data-tab="triggered_effects">Triggered Effects</a>
+    <a class="item" data-tab="character_traits">Character Traits</a>
+    <a class="item" data-tab="equipment">Equipment</a>
     <!--<a class="item" data-tab="spells">Spells</a>-->
     <a class="item" data-tab="effects">Effects</a>
   </nav>
@@ -47,9 +50,19 @@
        {{> "systems/outbreakundead2e/templates/actor/parts/actor-vitality.hbs"}}
     </div>
 
-    {{!-- Owned Items Tab --}}
-    <div class="tab items" data-group="primary" data-tab="items">
-       {{> "systems/outbreakundead2e/templates/actor/parts/actor-items.html"}}
+    {{!-- Triggerted Effects Tab --}}
+    <div class="tab triggered_effects" data-group="primary" data-tab="triggered_effects">
+       {{> "systems/outbreakundead2e/templates/actor/parts/actor-triggered-effects.hbs"}}
+    </div>
+
+    {{!-- Character Traits Tab --}}
+    <div class="tab character_traits" data-group="primary" data-tab="character_traits">
+       {{> "systems/outbreakundead2e/templates/actor/parts/actor-character-traits.hbs"}}
+    </div>
+
+    {{!-- Equipment Tab --}}
+    <div class="tab items" data-group="primary" data-tab="equipment">
+       {{> "systems/outbreakundead2e/templates/actor/parts/actor-equipment.hbs"}}
     </div>
 
     {{!-- Owned Spells Tab --}}
@@ -57,7 +70,7 @@
       {{> "systems/outbreakundead2e/templates/actor/parts/actor-spells.html"}}
     </div>
 
-    {{!-- Active Effects Tab --}}
+    {{!-- Effects and Traits Tab --}}
     <div class="tab effects flexcol" data-group="primary" data-tab="effects">
       {{> "systems/outbreakundead2e/templates/actor/parts/actor-effects.html"}}
     </div>
