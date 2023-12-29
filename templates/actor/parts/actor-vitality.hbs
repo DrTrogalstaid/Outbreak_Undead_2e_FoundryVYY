@@ -5,14 +5,14 @@
         <!--Injuries-->
         <div class="injuries flexcol">
             <h3>Injuries</h3>
-            <div class="flexcol flex-group-left">
+            <div class="flexcol">
                 {{#each system.injuries as |injury key|}}
-                    <div class="flexrow flex-group-left">
+                    <li class="flexrow">
                         <label for="system.injuries.{{key}}.is_injured"></label>
                         <input type="checkbox" name="system.injuries.{{key}}.is_injured" value="{{key.is_injured}}"/>
                         <label for="system.injuries.{{key}}.description"></label>
-                        <input type="text" name="system.injuries.{{key}}.description" class="sheet-line-input" value="{{injury.description}}" data-dtype="String" />
-                    </div>
+                        <input type="text" name="system.injuries.{{key}}.description" class="sheet-line-input flex3" value="{{injury.description}}" data-dtype="String" />
+                    </li>
                 {{/each}}
             </div>
         </div>
@@ -34,10 +34,21 @@
              </div>
             <!-- Total Damage Threshold -->  
             <div class="damage_threshold_total flexrow">
+                <!--Only to make sure Total dones't take up too much room-->
+                <div class="flexcol">
+                </div>
                 <div class="flexcol">
                     <div>Total</div>
-                    <label for="system.damage_threshold.total"></label>
-                    <input type="text" name="system.damage_threshold.total" readonly value="{{system.damage_threshold.total}}" data-dtype="Number"/> 
+                    <li class="flexrow sheet-box-border flex-shrink">
+                        <div class="sheet-image-in-box">
+                            <img class="item sheet-image-no-border" src="systems/outbreakundead2e/assets/icons/damage_threshold.png"/>
+                        </div>
+                        <label for="system.damage_threshold.total"></label>
+                        <input type="text" class="sheet-input-no-border flex3" name="system.damage_threshold.total" readonly value="{{system.damage_threshold.total}}" data-dtype="Number"/> 
+                    </li>
+                </div>
+                <!--Only to make sure Total dones't take up too much room-->
+                <div class="flexcol">
                 </div>
             </div>
         </div>
@@ -66,9 +77,11 @@
         <div class="flexcol">
             <h3>Psyche</h3>
             <!--Morale-->
-            <div class="flexrow flex-group-center">
-                <div>Morale </div>
-                <!--TODO: Smiley Face-->
+            <li class="flexrow flex-group-center">
+                <div class="flexrow">
+                    <div>Morale</div> 
+                    <img class="item sheet-image-no-border flex0" src="systems/outbreakundead2e/assets/icons/morale.png" height="16" width="16"/>
+                </div>
                 <div class="flex-col flex-group-center">
                     <label for="system.morale.spew">Wb + Eb</label>
                     <input type="text" name="system.morale.spew" class="sheet-box-border" readonly value="{{system.morale.spew}}"></input>
@@ -83,7 +96,7 @@
                     <label for="system.morale.total">Total</label>
                     <input type="text" name="system.morale.total" class="sheet-box-border" readonly value="{{system.morale.total}}"></input>
                 </div>
-            </div>
+            </li>
             <!--Coping Mechanisms-->
             <div class="flexcol">
                 <h3>Coping Mechanisms</h3>
