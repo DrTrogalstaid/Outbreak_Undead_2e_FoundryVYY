@@ -254,29 +254,29 @@
             "primary": "perception",
             "supporting": "willpower"
           },
-          "": {
-            "name": "",
+          "s_1": {
+            "name": "S",
             "advancement": 0,
-            "primary": "",
-            "supporting": ""
+            "primary": "perception",
+            "supporting": "willpower"
           },
-          "": {
-            "name": "",
+          "s_2": {
+            "name": "S",
             "advancement": 0,
-            "primary": "",
-            "supporting": ""
+            "primary": "perception",
+            "supporting": "willpower"
           },
-          "": {
-            "name": "",
+          "s_3": {
+            "name": "S",
             "advancement": 0,
-            "primary": "",
-            "supporting": ""
+            "primary": "perception",
+            "supporting": "willpower"
           },
-          "": {
-            "name": "",
+          "s_4": {
+            "name": "S",
             "advancement": 0,
-            "primary": "",
-            "supporting": ""
+            "primary": "perception",
+            "supporting": "willpower"
           },
           "martial_arts": {
             "name": "Martial Arts",
@@ -290,17 +290,17 @@
             "primary": "perception",
             "supporting": "willpower"
           },
-          "": {
-            "name": "",
+          "s_5": {
+            "name": "S",
             "advancement": 0,
-            "primary": "",
-            "supporting": ""
+            "primary": "perception",
+            "supporting": "willpower"
           },
-          "": {
-            "name": "",
+          "s_6": {
+            "name": "S",
             "advancement": 0,
-            "primary": "",
-            "supporting": ""
+            "primary": "perception",
+            "supporting": "willpower"
           },
           "ride": {
             "name": "Ride",
@@ -308,11 +308,11 @@
             "primary": "empathy",
             "supporting": "willpower"
           },
-          "": {
-            "name": "",
+          "s_7": {
+            "name": "S",
             "advancement": 0,
-            "primary": "",
-            "supporting": ""
+            "primary": "empathy",
+            "supporting": "willpower"
           },
           "science": {
             "name": "Science",
@@ -320,17 +320,17 @@
             "primary": "perception",
             "supporting": "willpower"
           },
-          "": {
-            "name": "",
+          "s_8": {
+            "name": "S",
             "advancement": 0,
-            "primary": "",
-            "supporting": ""
+            "primary": "perception",
+            "supporting": "willpower"
           },
-          "": {
-            "name": "",
+          "s_9": {
+            "name": "S",
             "advancement": 0,
-            "primary": "",
-            "supporting": ""
+            "primary": "perception",
+            "supporting": "willpower"
           },
           "survival": {
             "name": "Survival",
@@ -338,23 +338,23 @@
             "primary": "perception",
             "supporting": "willpower"
           },
-          "": {
-            "name": "",
+          "s_10": {
+            "name": "S",
             "advancement": 0,
-            "primary": "",
-            "supporting": ""
+            "primary": "perception",
+            "supporting": "willpower"
           },
-          "": {
-            "name": "",
+          "s_11": {
+            "name": "S",
             "advancement": 0,
-            "primary": "",
-            "supporting": ""
+            "primary": "perception",
+            "supporting": "willpower"
           },
-          "": {
-            "name": "",
+          "s_12": {
+            "name": "S",
             "advancement": 0,
-            "primary": "",
-            "supporting": ""
+            "primary": "perception",
+            "supporting": "willpower"
           },
           "toughness": {
             "name": "Toughness",

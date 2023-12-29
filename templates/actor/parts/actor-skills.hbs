@@ -47,8 +47,8 @@
           <img class="item sheet-image-no-border flex0 sheet-image-skill-supporting" src="systems/outbreakundead2e/assets/icons/spew/{{skill.supporting}}.png" height="16" width="16" />
           <!--Advancement-->
           <!--TODO: Change this, so the number changes into an image??-->
-          <label class="flex0" for="system.skills.basic.{{key}}.advancement"></label>
-          <input class="flex0" type="text" name="system.skills.basic.{{key}}.advancement" value="{{skill.advancement}}" data-dtype="Number" />
+          <label class="flex0" for="system.skills.trained.{{key}}.advancement"></label>
+          <input class="flex0" type="text" name="system.skills.trained.{{key}}.advancement" value="{{skill.advancement}}" data-dtype="Number" />
           <!--Name-->
           <div class="flexrow">
             <div class="flex0">{</div>
@@ -56,11 +56,11 @@
             <div class="flex0">%}</div>
           </div>
           <!--Advancement Bonus-->
-          <label class="flex0" for="system.skills.basic.{{key}}.bonus"></label>
-          <input class="flex0" type="text" name="system.skills.basic.{{key}}.bonus" readonly value="{{skill.bonus}}" data-dtype="String" />
+          <label class="flex0" for="system.skills.trained.{{key}}.bonus"></label>
+          <input class="flex0" type="text" name="system.skills.trained.{{key}}.bonus" readonly value="{{skill.bonus}}" data-dtype="String" />
           <!--Skill Check % Total-->
-          <label class="flex0" for="system.skills.basic.{{key}}.base"></label>
-          <input type="text" name="system.skills.basic.{{key}}.base" readonly value="{% {{skill.base}} }" data-dtype="String" />
+          <label class="flex0" for="system.skills.trained.{{key}}.base"></label>
+          <input type="text" name="system.skills.trained.{{key}}.base" readonly value="{% {{skill.base}} }" data-dtype="String" />
       </li>
       {{/each}}    
         </div>
@@ -79,8 +79,8 @@
           <img class="item sheet-image-no-border flex0 sheet-image-skill-supporting" src="systems/outbreakundead2e/assets/icons/spew/{{skill.supporting}}.png" height="16" width="16" />
           <!--Advancement-->
           <!--TODO: Change this, so the number changes into an image??-->
-          <label class="flex0" for="system.skills.basic.{{key}}.advancement"></label>
-          <input class="flex0" type="text" name="system.skills.basic.{{key}}.advancement" value="{{skill.advancement}}" data-dtype="Number" />
+          <label class="flex0" for="system.skills.expert.{{key}}.advancement"></label>
+          <input class="flex0" type="text" name="system.skills.expert.{{key}}.advancement" value="{{skill.advancement}}" data-dtype="Number" />
           <!--Name-->
           <div class="flexrow">
             <div class="flex0">{</div>
@@ -88,11 +88,11 @@
             <div class="flex0">%}</div>
           </div>
           <!--Advancement Bonus-->
-          <label class="flex0" for="system.skills.basic.{{key}}.bonus"></label>
-          <input class="flex0" type="text" name="system.skills.basic.{{key}}.bonus" readonly value="{{skill.bonus}}" data-dtype="String" />
+          <label class="flex0" for="system.skills.expert.{{key}}.bonus"></label>
+          <input class="flex0" type="text" name="system.skills.expert.{{key}}.bonus" readonly value="{{skill.bonus}}" data-dtype="String" />
           <!--Skill Check % Total-->
-          <label class="flex0" for="system.skills.basic.{{key}}.base"></label>
-          <input type="text" name="system.skills.basic.{{key}}.base" readonly value="{% {{skill.base}} }" data-dtype="String" />
+          <label class="flex0" for="system.skills.expert.{{key}}.base"></label>
+          <input type="text" name="system.skills.expert.{{key}}.base" readonly value="{% {{skill.base}} }" data-dtype="String" />
       </li>
       {{/each}}    
         </div>

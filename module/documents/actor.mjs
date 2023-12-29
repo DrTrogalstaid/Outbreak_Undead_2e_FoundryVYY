@@ -61,12 +61,16 @@ export class OutbreakUndead2eActor extends Actor {
       ability.mod = Math.floor(ability.value / 10);
     }
 
-    // Set Damage Threshold based on str.mod and wil.mod
+    // Set Damage Threshold - Based on str.mod and wil.mod
     systemData.damage_threshold.spew = (systemData.abilities.str.mod + systemData.abilities.wil.mod);
+    //TODO: Determine what this is.
+    systemData.damage_threshold.bonus = 0;
     systemData.damage_threshold.total = (systemData.damage_threshold.spew + systemData.damage_threshold.bonus);
 
-    // Set Morale
+    // Set Morale - Based on wil.mod and emp.mod
     systemData.morale.spew = (systemData.abilities.wil.mod + systemData.abilities.emp.mod);
+    //TODO: Determine what this is.
+    systemData.morale.bonus = 0;
     systemData.morale.total = (systemData.morale.spew + systemData.morale.bonus);
 
     // Basic Skills
@@ -87,7 +91,6 @@ export class OutbreakUndead2eActor extends Actor {
           skill.base = systemData.abilities.wil.value;
           break; 
       }
-
       switch (skill.supporting)
       {
         case "strength":
@@ -108,7 +111,84 @@ export class OutbreakUndead2eActor extends Actor {
       {
         skill.bonus = 0;
       }
-
+    }
+    // Trained Skills
+    for (let [key, skill] of Object.entries(systemData.skills.trained))
+    {
+      switch (skill.primary)
+      {
+        case "strength":
+          skill.base = systemData.abilities.str.value;
+          break; 
+        case "perception":
+          skill.base = systemData.abilities.per.value;
+          break; 
+        case "empathy":
+          skill.base = systemData.abilities.emp.value;
+          break; 
+        case "willpower":
+          skill.base = systemData.abilities.wil.value;
+          break; 
+      }
+      switch (skill.supporting)
+      {
+        case "strength":
+          skill.base += systemData.abilities.str.mod; 
+          break; 
+        case "perception":
+          skill.base += systemData.abilities.per.mod;
+          break; 
+        case "empathy":
+          skill.base += systemData.abilities.emp.mod;
+          break; 
+        case "willpower":
+          skill.base += systemData.abilities.wil.mod;
+          break; 
+      }
+      //TODO: Add bonus based on advancement level
+      if (skill.advancement == 0)
+      {
+        skill.bonus = 0;
+      }
+    }
+    // Expert Skills
+    for (let [key, skill] of Object.entries(systemData.skills.expert))
+    {
+      switch (skill.primary)
+      {
+        case "strength":
+          skill.base = systemData.abilities.str.mod;
+          break; 
+        case "perception":
+          skill.base = systemData.abilities.per.mod;
+          break; 
+        case "empathy":
+          skill.base = systemData.abilities.emp.mod;
+          break; 
+        case "willpower":
+          skill.base = systemData.abilities.wil.mod;
+          break; 
+      }
+      switch (skill.supporting)
+      {
+        case "strength":
+          skill.base += systemData.abilities.str.mod; 
+          break; 
+        case "perception":
+          skill.base += systemData.abilities.per.mod;
+          break; 
+        case "empathy":
+          skill.base += systemData.abilities.emp.mod;
+          break; 
+        case "willpower":
+          skill.base += systemData.abilities.wil.mod;
+          break; 
+      }
+      //TODO: Add bonus based on advancement level
+      if (skill.advancement == 0)
+      {
+        skill.bonus = 0;
+      }
     }
 
 
