@@ -29,7 +29,7 @@
     {{!-- Default tab is specified in actor-sheet.mjs --}}
     <a class="item" data-tab="skills">Skills</a>
     <a class="item" data-tab="vitality">Vitality</a>
-    <a class="item" data-tab="training">Training Bonus</a>
+    <a class="item" data-tab="training">Training</a>
     <a class="item" data-tab="triggered_effects">Triggered Effects</a>
     <a class="item" data-tab="character_traits">Character Traits</a>
     <a class="item" data-tab="equipment">Equipment</a>
@@ -48,6 +48,11 @@
     {{!-- Vitality Tab --}}
     <div class="tab vitality" data-group="primary" data-tab="vitality">
        {{> "systems/outbreakundead2e/templates/actor/parts/actor-vitality.hbs"}}
+    </div>
+
+    {{!-- Training Tab --}}
+    <div class="tab training" data-group="primary" data-tab="training">
+       {{> "systems/outbreakundead2e/templates/actor/parts/actor-training.hbs"}}
     </div>
 
     {{!-- Triggerted Effects Tab --}}

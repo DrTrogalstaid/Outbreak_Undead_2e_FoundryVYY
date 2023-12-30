@@ -336,6 +336,12 @@
   transform: rotate(180deg);
 }
 
+.outbreakundead2e .sheet-gear-bonus {
+  font-size: 33px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
 .outbreakundead2e sheet-checkbox {
   display: flex;
   flex-direction: row;
