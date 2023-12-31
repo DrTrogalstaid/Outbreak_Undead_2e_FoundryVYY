@@ -20,6 +20,20 @@
       }
     },
     "character": {
+      "level_of_play": {
+        "arcade": {
+          "name": "Arcade",
+          "slected": "Flase"
+        },
+        "weekend_warrior": {
+          "name": "Weekend Warrior",
+          "selected": "Flase"
+        },
+        "survivalist": {
+          "name": "Survivalist",
+          "selected": "True"
+        }
+      },
       "templates": ["base"],
       "abilities": {
         "str": {

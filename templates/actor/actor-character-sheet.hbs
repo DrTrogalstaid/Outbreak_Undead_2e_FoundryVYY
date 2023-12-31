@@ -1,10 +1,24 @@
 <form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
   {{!-- Sheet Header --}}
   <header class="sheet-header">
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-    <div class="header-fields">
+    <div class="flexcol flex1 flex-group-center">
+      <!--Profile Image-->
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="128" width="128"/>
+      <!--Level of Play Dropdown-->
+      <!--TODO: Add a way to change this and have it save-->
+      <!--TODO: Make this effect what shows up on the character sheet-->
+      <select id="level_of_play" class="flex1">
+        {{#each system.level_of_play}}
+          {{#if this.selected}}
+            <option value="{{this}}" selected>{{this.name}}</option>
+          {{else}}
+            <option value="{{this}}">{{this.name}}</option>
+          {{/if}}
+        {{/each}}
+      </select>
+    </div>
+    <div class="header-fields flex3">
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-      
       <!-- SPEW Attributes-->  
       <div class="flexrow flex2">
         <div class="flexcol">
