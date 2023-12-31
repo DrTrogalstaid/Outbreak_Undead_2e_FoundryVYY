@@ -6,19 +6,24 @@
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
       
       <!-- SPEW Attributes-->  
-      <div class="abilities flexrow">  
-          {{#each system.abilities as |ability key|}}
-          <div class="flexcol flex-group-center">
-            <img class="item sheet-image-no-border" src="systems/outbreakundead2e/assets/icons/spew/{{ability.label}}.png" height="56" />
-            <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d100+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{ability.label}}</label>
-            <div class="flexrow">
-              <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-              <div class="ability-mod rollable item sheet-box-border" data-roll="d100+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</div>
-            </div>
-          </div>
-          {{/each}}
-      </div>  
-  {{> "systems/outbreakundead2e/templates/actor/parts/actor-survival-gestalt-compitence.hbs"}}
+      <div class="flexrow flex2">
+        <div class="flexcol">
+          <h4 class="resource-label sheet-gear-bonus flex-group-center">S.P.E.W. Attributes</h4>
+          <div class="abilities flexrow">  
+            {{#each system.abilities as |ability key|}}
+              <div class="flexcol flex-group-center">
+                <img class="item sheet-image-no-border" src="systems/outbreakundead2e/assets/icons/spew/{{ability.label}}.png" height="56" />
+                <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d100+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{ability.label}}</label>
+                <div class="flexrow">
+                  <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+                  <div class="ability-mod rollable item sheet-box-border" data-roll="d100+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</div>
+                </div>
+              </div>
+            {{/each}}
+          </div>  
+        {{> "systems/outbreakundead2e/templates/actor/parts/actor-survival-gestalt-compitence.hbs"}}
+        </div>
+      </div>
     </div>
   </header>
   

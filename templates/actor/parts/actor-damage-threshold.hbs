@@ -1,0 +1,36 @@
+        <!-- Damage Threshold -->
+        <div class="flexcol">
+            <h3>Damage Threshold</h3>
+            <div class="damage_threshold flexrow flex-group-center">
+                <!-- Number from Ability Modifiers -->
+                <div class="flexcol flex-group-center">
+                    <label for="system.damage_threshold.spew">Sb + Wb</label>
+                    <input type="text" name="system.damage_threshold.spew" class="sheet-box-border" readonly value="{{system.damage_threshold.spew}}" data-dtype="Number"/>
+                </div>
+                <div>+</div>
+                <!-- Number from Bonus -->
+                <div class="flexcol flex-group-center">   
+                    <label for="system.damage_threshold.bouns">Bonus</label>
+                    <input type="text" name="system.damage_threshold.bonus" readonly value="{{system.damage_threshold.bonus}}" data-dtype="Number"/> 
+                </div>
+             </div>
+            <!-- Total Damage Threshold -->  
+            <div class="damage_threshold_total flexrow">
+                <!--Only to make sure Total dones't take up too much room-->
+                <div class="flexcol">
+                </div>
+                <div class="flexcol">
+                    <div>Total</div>
+                    <li class="flexrow sheet-box-border flex-shrink">
+                        <div class="sheet-image-in-box">
+                            <img class="item sheet-image-no-border" src="systems/outbreakundead2e/assets/icons/damage_threshold.png"/>
+                        </div>
+                        <label for="system.damage_threshold.total"></label>
+                        <input type="text" class="sheet-input-no-border flex3" name="system.damage_threshold.total" readonly value="{{system.damage_threshold.total}}" data-dtype="Number"/> 
+                    </li>
+                </div>
+                <!--Only to make sure Total dones't take up too much room-->
+                <div class="flexcol">
+                </div>
+            </div>
+        </div>

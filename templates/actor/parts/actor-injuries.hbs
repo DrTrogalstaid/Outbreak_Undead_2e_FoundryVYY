@@ -1,0 +1,17 @@
+<!--Injuries-->
+        <div class="injuries flexcol">
+            <h3>Injuries</h3>
+            <div class="flexrow">
+                <div class="sheet-vertical-text resource-label flex0">Hit Points</div>
+            <div class="flexcol">
+                {{#each system.injuries as |injury key|}}
+                    <div class="flexrow">
+                        <label for="system.injuries.{{key}}.is_injured"></label>
+                        <input type="checkbox" class="sheet-checkbox flex1" name="system.injuries.{{key}}.is_injured" value="{{key.is_injured}}"/>
+                        <label for="system.injuries.{{key}}.description"></label>
+                        <input type="text" name="system.injuries.{{key}}.description" class="sheet-line-input flex3" value="{{injury.description}}" data-dtype="String" />
+                    </div>
+                {{/each}}
+            </div>
+            </div>
+        </div>

@@ -10,6 +10,8 @@
     "systems/outbreakundead2e/templates/actor/parts/actor-survival-gestalt-compitence.hbs",
     "systems/outbreakundead2e/templates/actor/parts/actor-skills.hbs",
     "systems/outbreakundead2e/templates/actor/parts/actor-vitality.hbs",
+    "systems/outbreakundead2e/templates/actor/parts/actor-injuries.hbs",
+    "systems/outbreakundead2e/templates/actor/parts/actor-damage-threshold.hbs",
     "systems/outbreakundead2e/templates/actor/parts/actor-training.hbs",
     "systems/outbreakundead2e/templates/actor/parts/actor-triggered-effects.hbs",
     "systems/outbreakundead2e/templates/actor/parts/actor-character-traits.hbs",

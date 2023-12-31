@@ -2,59 +2,8 @@
 <div class="vitality flexcol">
     <!--Injuries and Damage Threshold-->
     <div class="flexrow flex-group-center">
-        <!--Injuries-->
-        <div class="injuries flexcol">
-            <h3>Injuries</h3>
-            <div class="flexrow">
-                <div class="sheet-vertical-text resource-label flex0">Hit Points</div>
-            <div class="flexcol">
-                {{#each system.injuries as |injury key|}}
-                    <div class="flexrow">
-                        <label for="system.injuries.{{key}}.is_injured"></label>
-                        <input type="checkbox" class="sheet-checkbox flex1" name="system.injuries.{{key}}.is_injured" value="{{key.is_injured}}"/>
-                        <label for="system.injuries.{{key}}.description"></label>
-                        <input type="text" name="system.injuries.{{key}}.description" class="sheet-line-input flex3" value="{{injury.description}}" data-dtype="String" />
-                    </div>
-                {{/each}}
-            </div>
-            </div>
-        </div>
-        <!-- Damage Threshold -->
-        <div class="flexcol">
-            <h3>Damage Threshold</h3>
-            <div class="damage_threshold flexrow flex-group-center">
-                <!-- Number from Ability Modifiers -->
-                <div class="flexcol flex-group-center">
-                    <label for="system.damage_threshold.spew">Sb + Wb</label>
-                    <input type="text" name="system.damage_threshold.spew" class="sheet-box-border" readonly value="{{system.damage_threshold.spew}}" data-dtype="Number"/>
-                </div>
-                <div>+</div>
-                <!-- Number from Bonus -->
-                <div class="flexcol flex-group-center">   
-                    <label for="system.damage_threshold.bouns">Bonus</label>
-                    <input type="text" name="system.damage_threshold.bonus" readonly value="{{system.damage_threshold.bonus}}" data-dtype="Number"/> 
-                </div>
-             </div>
-            <!-- Total Damage Threshold -->  
-            <div class="damage_threshold_total flexrow">
-                <!--Only to make sure Total dones't take up too much room-->
-                <div class="flexcol">
-                </div>
-                <div class="flexcol">
-                    <div>Total</div>
-                    <li class="flexrow sheet-box-border flex-shrink">
-                        <div class="sheet-image-in-box">
-                            <img class="item sheet-image-no-border" src="systems/outbreakundead2e/assets/icons/damage_threshold.png"/>
-                        </div>
-                        <label for="system.damage_threshold.total"></label>
-                        <input type="text" class="sheet-input-no-border flex3" name="system.damage_threshold.total" readonly value="{{system.damage_threshold.total}}" data-dtype="Number"/> 
-                    </li>
-                </div>
-                <!--Only to make sure Total dones't take up too much room-->
-                <div class="flexcol">
-                </div>
-            </div>
-        </div>
+        {{> "systems/outbreakundead2e/templates/actor/parts/actor-injuries.hbs"}}
+        {{> "systems/outbreakundead2e/templates/actor/parts/actor-damage-threshold.hbs"}}
     </div>
     <div class="flexrow flex-group-center">
         <!--Viral-->
