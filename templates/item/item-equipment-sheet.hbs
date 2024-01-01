@@ -1,0 +1,77 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Equipment"/></h1>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="description">
+      {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Details Tab --}}
+    <div class="tab details" data-group="primary" data-tab="details">
+      {{!-- As you add new fields, add them in here! --}}
+      <!--Tier-->
+      <div class="resource flexrow">
+        <label class="resource-label">Tier:</label>
+        <input type="text" name="system.tier" value="{{system.tier}}" data-dtype="Number"/>
+      </div>
+      <!--Cargo Units-->
+      <div class="resource flexrow">
+        <label class="resource-label">Cargo Units:</label>
+        <input type="text" name="system.cargo_units.unit" value="{{system.cargo_units.unit}}" data-dtype="Number"/>
+      </div>
+      <div class="resource flexrow">
+        <label class="resource-label"> Partial Cargo Units:</label>
+        <input type="text" name="system.cargo_units.partial" value="{{system.cargo_units.partial}}" data-dtype="Number"/>
+      </div>
+      <!--Durability-->
+      <div class="resource flexrow">
+        <label class="resource-label">Durability:</label>
+        <input type="text" name="system.durability" value="{{system.durability}}" data-dtype="Number"/>
+      </div>
+      <!--Capacity-->
+      <div class="resource flexrow">
+        <label class="resource-label">Capacity:</label>
+        <input type="text" name="system.capacity" value="{{system.capacity}}" data-dtype="Number"/>
+      </div>
+      <!--Crafting-->
+      <div class="resource flexrow">
+        <label class="resource-label">Crafting Type:</label>
+        <input type="text" name="system.crafting.labor.type" value="{{system.crafting.labor.type}}" data-dtype="String"/>
+      </div>
+      <div class="resource flexrow">
+        <label class="resource-label">Crafting Labor Min:</label>
+        <input type="text" name="system.crafting.labor.min" value="{{system.crafting.labor.min}}" data-dtype="Number"/>
+      </div>
+      <div class="resource flexrow">
+        <label class="resource-label">Crafting Labor Max:</label>
+        <input type="text" name="system.crafting.labor.max" value="{{system.crafting.labor.max}}" data-dtype="Number"/>
+      </div>
+      <div class="resource flexrow">
+        <label class="resource-label">Crafting Labor Formula:</label>
+        <input type="text" name="system.crafting.labor.formula" value="{{system.crafting.labor.formula}}" data-dtype="String"/>
+      </div>
+      <!--Kit-->
+      <div class="resource flexrow">
+        <div>TODO: Kit</div>
+      </div>
+      <!--modifieres-->
+      <div class="resource flexrow">
+        <div>TODO: Modifiers</div>
+      </div>
+    </div>
+  </section>
+</form>

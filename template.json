@@ -25,7 +25,7 @@
           "name": "Arcade",
           "slected": "Flase"
         },
-        "weekend_warrior": {
+        "weekend-warrior": {
           "name": "Weekend Warrior",
           "selected": "Flase"
         },
@@ -425,7 +425,7 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell", "skill"],
+    "types": ["item", "feature", "spell", "skill", "equipment", "kit"],
     "templates": {
       "base": {
         "description": ""
@@ -467,6 +467,43 @@
         "effect": ""
       },
       "modifieres": 0
+    },
+    "equipment": {
+      "cargo_units": {
+        "unit": 0,
+        "partial": 0
+      },
+      "durability": 0,
+      "capacity": 0,
+      "tier": 0,
+      "crafting":{
+        "type": "",
+        "labor": {
+          "min": 0,
+          "max": 0,
+          "formula": ""
+        }
+      },
+      "triggered_effects":{
+        
+      },
+      "kit": {
+        "green": {
+          "name": ""
+        },
+        "orange": {
+          "name": ""
+        },
+        "red": {
+          "name": ""
+        },
+        "blue": {
+          "name": ""
+        }
+      }
+    },
+    "kit": {
+      "equipment": []
     }
   }
 }

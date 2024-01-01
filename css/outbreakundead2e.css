@@ -344,6 +344,13 @@
   box-decoration-break: clone;
 }
 
+.outbreakundead2e .sheet-survivalist-highlight {
+  background-color: rgba(255, 0, 0, 0.55);
+  padding: 2px;
+  border-radius: 8px;
+  display: inline-block;
+  box-decoration-break: clone;
+}
 
 .outbreakundead2e .sheet-vertical-text {
   writing-mode: vertical-rl;

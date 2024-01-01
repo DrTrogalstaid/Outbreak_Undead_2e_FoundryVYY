@@ -7,15 +7,17 @@
       <!--Level of Play Dropdown-->
       <!--TODO: Add a way to change this and have it save-->
       <!--TODO: Make this effect what shows up on the character sheet-->
-      <select id="level_of_play" class="flex1">
-        {{#each system.level_of_play}}
-          {{#if this.selected}}
-            <option value="{{this}}" selected>{{this.name}}</option>
+      <a class="level-of-play-select" title="Level of Play Selector">
+        <select id="level_of_play" class="flex1">
+        {{#each system.level_of_play as |level key|}}
+          {{#if level.selected}}
+          <option value="{{key}}" class="sheet-{{key}}-highlight" selected>{{level.name}}</option>
           {{else}}
-            <option value="{{this}}">{{this.name}}</option>
+          <option value="{{key}}" class="sheet-{{key}}-highlight" >{{level.name}}</option>
           {{/if}}
         {{/each}}
       </select>
+      </a>
     </div>
     <div class="header-fields flex3">
       <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
