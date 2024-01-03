@@ -5,6 +5,7 @@
         {{> "systems/outbreakundead2e/templates/actor/parts/actor-injuries.hbs"}}
         {{> "systems/outbreakundead2e/templates/actor/parts/actor-damage-threshold.hbs"}}
     </div>
+    {{#unless (eq system.level_of_play "arcade")}}
     <div class="flexrow flex-group-center">
         <!--Viral-->
         <div class="flexcol">
@@ -58,7 +59,6 @@
                 {{/each}}
             </div>
         </div>
-
     </div>
-
+    {{/unless}}
 </div>

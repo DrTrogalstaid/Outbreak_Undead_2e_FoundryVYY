@@ -1,6 +1,7 @@
 <div class="flexrow flex-group-center">
   <div class="flexrow">
     <!--Skill Points-->
+    {{#unless (eq system.level_of_play "arcade")}}
     <li class="flexrow skill_points">
       <label for="system.survival_points" class="resource-label">Survival Points</label>
       <div class="flexrow sheet-box-border">
@@ -20,6 +21,7 @@
         <input type="text" class="sheet-input-no-border flex2" name="system.gestalt_level" value="{{system.gestalt_level}}" data-dtype="Number"/>
       </div>
     </li>
+    {{/unless}}
     <!--Competence Points-->
     <li class="flexrow competence_points">
       <label for="system.competence_points" class="resource-label">Competence Points</label>
