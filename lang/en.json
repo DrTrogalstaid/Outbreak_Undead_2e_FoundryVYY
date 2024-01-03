@@ -9,6 +9,14 @@
   "OUTBREAKUNDEAD2E.AbilityEmpAbbr": "emp",
   "OUTBREAKUNDEAD2E.AbilityWilAbbr": "wil",
 
+  "OUTBREAKUNDEAD2E.Arcade": "Arcade",
+  "OUTBREAKUNDEAD2E.WeekendWarrior": "Weekend Warrior",
+  "OUTBREAKUNDEAD2E.Survivalist": "Survivalist",
+
+  "OUTBREAKUNDEAD2E.ArcadeAbbr": "arcade",
+  "OUTBREAKUNDEAD2E.WeekendWarriorAbbr": "weekend_warrior",
+  "OUTBREAKUNDEAD2E.SurvivalistAbbr": "survivalist",
+
   "OUTBREAKUNDEAD2E.EffectCreate": "Create Effect",
   "OUTBREAKUNDEAD2E.EffectToggle": "Toggle Effect",
   "OUTBREAKUNDEAD2E.EffectEdit": "Edit Effect",

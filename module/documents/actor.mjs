@@ -53,6 +53,11 @@ export class OutbreakUndead2eActor extends Actor {
 
     // Make modifications to data here. For example:
     const systemData = actorData.system;
+    
+    // Set Level of Play
+    // NOTE: This is important to do first because it effects may other vlaues on the character sheet
+    
+
 
     // Loop through ability scores, and add their modifiers to our sheet output.
     // TODO: Change abilities to "spew" 

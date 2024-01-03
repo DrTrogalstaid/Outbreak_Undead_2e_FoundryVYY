@@ -180,6 +180,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     // Level of Play Dropdown
     var level_of_play_select = document.getElementById("level_of_play");
     level_of_play_select.addEventListener("change",function(){
+      // Set player's level_of_play to the new level_of_play
       console.log(level_of_play_select.value);
     });
 

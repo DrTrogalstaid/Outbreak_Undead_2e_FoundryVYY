@@ -17,3 +17,9 @@ OUTBREAKUNDEAD2E.abilityAbbreviations = {
   "emp": "OUTBREAKUNDEAD2E.AbilityEmpAbbr",
   "wil": "OUTBREAKUNDEAD2E.AbilityWilAbbr",
 };
+
+OUTBREAKUNDEAD2E.levelsOfPlay = {
+  "arcade": "OUTBREAKUNDEAD2E.Arcade",
+  "weekend_warrior": "OUTBREAKUNDEAD2E.WeekendWarrior",
+  "survivalist": "OUTBREAKUNDEAD2E.Survivalist"
+};

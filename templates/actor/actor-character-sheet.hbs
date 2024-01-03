@@ -7,14 +7,12 @@
       <!--Level of Play Dropdown-->
       <!--TODO: Add a way to change this and have it save-->
       <!--TODO: Make this effect what shows up on the character sheet-->
-      <select id="level_of_play" class="level-of-play-select flex1">
-      {{#each system.level_of_play as |level key|}}
-        {{#if level.selected}}
-        <option value="{{key}}" class="sheet-{{key}}-highlight" selected>{{level.name}}</option>
-        {{else}}
-        <option value="{{key}}" class="sheet-{{key}}-highlight" >{{level.name}}</option>
-        {{/if}}
-      {{/each}}
+      <select name="system.level_of_play" id="level_of_play" class="level-of-play-select flex1" data-type="String">
+        {{#select system.level_of_play}}
+        <option value="arcade" class="sheet-arcade-highlight">Arcade</option>
+        <option value="weekend_warrior" class="sheet-weekend-warrior-highlight">Weekend Warrior</option>
+        <option value="survivalist" class="sheet-survivalist-highlight">Survivalist</option>
+        {{/select}}
       </select>
     </div>
     <div class="header-fields flex3">
