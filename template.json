@@ -23,11 +23,11 @@
       "level_of_play": {
         "arcade": {
           "name": "Arcade",
-          "slected": "Flase"
+          "selected": "False"
         },
         "weekend-warrior": {
           "name": "Weekend Warrior",
-          "selected": "Flase"
+          "selected": "False"
         },
         "survivalist": {
           "name": "Survivalist",

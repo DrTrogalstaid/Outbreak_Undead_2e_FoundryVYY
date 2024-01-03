@@ -178,7 +178,10 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     }
 
     // Level of Play Dropdown
-    html.find(".level-of-play-select").on("change",this._onLevelOfPlayChange.bind(this));
+    var level_of_play_select = document.getElementById("level_of_play");
+    level_of_play_select.addEventListener("change",function(){
+      console.log(level_of_play_select.value);
+    });
 
   }
 
@@ -241,19 +244,4 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     }
   }
 
-  /**
-   * Handle Level of Play Dropdown Change
-   * @param {Event} event    The originating cheange event
-   * @private
-   */
-  _onLevelOfPlayChange(event) {
-    event.preventDefault();
-    let element = event.currentTarget;
-    
-
-    console.log("Selected Value: ", element);
-    
-
-    return;
-  }
 }
