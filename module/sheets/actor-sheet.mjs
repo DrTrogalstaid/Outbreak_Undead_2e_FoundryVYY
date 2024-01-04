@@ -184,6 +184,37 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
       console.log(level_of_play_select.value);
     });
 
+    // Spew General Check
+    var spew_general_check = document.querySelectorAll(".spew-name");
+    spew_general_check.forEach(function(spew_clicked) {
+      spew_clicked.addEventListener("click", function(event){
+        event.preventDefault()
+        // Spew Attribute
+        const spew_label = event.currentTarget.innerText;
+        const spew_id = event.currentTarget.dataset.label;
+        
+        //Debug
+        //console.log(spew_label);
+    
+        new Dialog({
+          title: `${spew_label} Check`,
+          content: `<p>What type of ${spew_label} Check?</p>`,
+          buttons: {
+            check: {
+              label: "Check",
+              callback: () => spewRollTest(spew_label, spew_id)
+            },
+            save: {
+              label: "Save"
+            }
+          }
+        }).render(true);
+
+      });
+
+    })
+
+
   }
 
   /**
@@ -213,6 +244,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     return await Item.create(itemData, {parent: this.actor});
   }
 
+  //-------------------ROLLS--------------------------
   /**
    * Handle clickable rolls.
    * @param {Event} event   The originating click event
@@ -223,14 +255,35 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const dataset = element.dataset;
 
-    // Handle item rolls.
+    console.log(element);
+    console.log(dataset);
+
+    // Handle Roll Types
     if (dataset.rollType) {
-      if (dataset.rollType == 'item') {
+      // item rolls
+      if (dataset.rollType == "item") {
         const itemId = element.closest('.item').dataset.itemId;
         const item = this.actor.items.get(itemId);
+        console.log(itemId);
         if (item) return item.roll();
       }
+      // skill rolls
+      // TODO: Give this it's own card for chat!
+      else if (dataset.rollType == "skill") {
+        let label = dataset.label ? `${dataset.label}` : "";
+        let percent_chance = dataset.percentChance;
+        let _flavor = label + ": Percent Chance " + percent_chance + "%";
+        // TODO: Make a new function in stead of calling getRollData to set the DC
+        let roll = new Roll("d100", this.actor.getRollData());
+        // TODO: Create an message sheet for Skill checks in stead of using this
+        roll.toMessage({
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          flavor: _flavor,
+          rollMode: game.settings.get('core', 'rollMode'),
+        });
+      }
     }
+
 
     // Handle rolls that supply the formula directly.
     if (dataset.roll) {

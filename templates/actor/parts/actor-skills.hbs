@@ -9,10 +9,10 @@
         </div>
         <div class="flexcol basic_skills_2">
         {{/if}}
-        <li class="flexrow">
+        <li class="flexrow item">
           <!--Images for Primary and Supporting stats-->
-          <img class="item sheet-image-no-border flex0" src="systems/outbreakundead2e/assets/icons/spew/{{skill.primary}}.png" height="16" width="16"/>
-          <img class="item sheet-image-no-border flex0 sheet-image-skill-supporting" src="systems/outbreakundead2e/assets/icons/spew/{{skill.supporting}}.png" height="16" width="16" />
+          <img class="sheet-image-no-border flex0" src="systems/outbreakundead2e/assets/icons/spew/{{skill.primary}}.png" height="16" width="16"/>
+          <img class="sheet-image-no-border flex0 sheet-image-skill-supporting" src="systems/outbreakundead2e/assets/icons/spew/{{skill.supporting}}.png" height="16" width="16" />
           <!--Advancement-->
           <!--TODO: Change this, so the number changes into an image??-->
           <label class="flex0" for="system.skills.basic.{{key}}.advancement"></label>
@@ -20,7 +20,8 @@
           <!--Name-->
           <div class="flexrow">
             <div class="flex0">{</div>
-            <div bold="true">{{skill.name}}</div>
+            <!--TODO: Change this to a popup for the skill item sheet-->
+            <div bold="true" class="rollable item" data-item-id="{{key}}" data-roll-type="item" data-type="skill">{{skill.name}}</div>
             <div class="flex0">%}</div>
           </div>
           <!--Advancement Bonus-->
@@ -28,7 +29,8 @@
           <input class="flex0" type="text" name="system.skills.basic.{{key}}.bonus" readonly value="{{skill.bonus}}" data-dtype="String" />
           <!--Skill Check % Total-->
           <label class="flex0" for="system.skills.basic.{{key}}.base"></label>
-          <input type="text" name="system.skills.basic.{{key}}.base" readonly value="{% {{skill.base}} }" data-dtype="String" />
+          <!--TODO: This is not the way we roll. The bonus' here are actually the check DC.-->
+          <div name="system.skills.basic.{{key}}.base" class="sheet-box-border rollable skill-roll" data-roll-type="skill" data-label="{{skill.name}}" data-percent-chance="{{skill.base}}">{% {{skill.base}} }</div>
         </li>
       {{/each}}
         </div>

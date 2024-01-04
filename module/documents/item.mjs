@@ -3,6 +3,12 @@
  * @extends {Item}
  */
 export class OutbreakUndead2eItem extends Item {
+  
+  // Handlebars template
+  chatTemplate = {
+    "skill": "systems/outbreakundead2e/templates/item/chat/skill-card.hbs"
+  };
+  
   /**
    * Augment the basic Item data model with additional dynamic data.
    */
@@ -16,7 +22,7 @@ export class OutbreakUndead2eItem extends Item {
    * Prepare a data object which is passed to any Roll formulas which are created related to this Item
    * @private
    */
-   getRollData() {
+  getRollData() {
     // If present, return the actor's roll data.
     if ( !this.actor ) return null;
     const rollData = this.actor.getRollData();
@@ -32,6 +38,26 @@ export class OutbreakUndead2eItem extends Item {
    * @private
    */
   async roll() {
+    
+    console.log("item.roll");
+
+    let chatData = {
+      user: game.user._id,
+      speaker: ChatMessage.getSpeaker()
+    };
+    
+    let cardData = {
+      ...this.data,
+      owner: this.actor.id
+    };
+
+    chatData.context = await renderTemplate(this.chatTemplate[this.type], cardData);
+
+    chatData.roll = true;
+
+    return ChatMessage.create(chatData);
+
+    /* Boilerplate default
     const item = this;
 
     // Initialize chat data.
@@ -64,5 +90,6 @@ export class OutbreakUndead2eItem extends Item {
       });
       return roll;
     }
+    */
   }
 }

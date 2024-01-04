@@ -18,5 +18,7 @@
     "systems/outbreakundead2e/templates/actor/parts/actor-equipment.hbs",
     "systems/outbreakundead2e/templates/actor/parts/actor-spells.html",
     "systems/outbreakundead2e/templates/actor/parts/actor-effects.html",
+    // Chat Dialog
+    "systems/outbreakundead2e/templates/chat/rolls/general-spew-dialog.hbs"
   ]);
 };
