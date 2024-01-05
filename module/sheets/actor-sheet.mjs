@@ -1,4 +1,5 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
+import * as Dice from "../dice.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -167,6 +168,12 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
 
+    // Skill Card
+    html.find(".skill-card").click(this._onSkillCard.bind(this));
+    // Skill Roll
+    html.find(".skill-roll").click(this._onSkillRoll.bind(this));
+
+
     // Drag events for macros.
     if (this.actor.isOwner) {
       let handler = ev => this._onDragStart(ev);
@@ -296,6 +303,44 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
       });
       return roll;
     }
+  }
+
+  _onSkillCard(event) {
+
+  }
+
+  _onSkillRoll(event) {
+    event.preventDefault();
+    
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+    const actorData = this.actor.toObject(false);
+    const level_of_play = actorData.system.level_of_play;
+
+    console.log(level_of_play);
+
+    // Determine formula based on Level of Play
+    // NOTE: Don't need to worry about arcade because they do not have Skills
+    let rollFormula;
+    if(level_of_play == "survivalist") {
+      rollFormula = "1d100";
+    }
+    else {
+      rollFormula = "1d10*10";
+    }
+    
+    let label = dataset.label ? `${dataset.label}` : "";
+    let percent_chance = dataset.percentChance;
+    let _flavor = label + ": Percent Chance " + percent_chance + "%";
+
+    let roll = new Roll(rollFormula, this.actor.getRollData());
+    // TODO: Create an message sheet for Skill checks in stead of using this
+    roll.toMessage({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      flavor: _flavor,
+      rollMode: game.settings.get('core', 'rollMode'),
+    });
+    
   }
 
 }

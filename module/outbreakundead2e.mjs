@@ -8,6 +8,8 @@ import { OutbreakUndead2eItemSheet } from "./sheets/item-sheet.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { OUTBREAKUNDEAD2E } from "./helpers/config.mjs";
 
+//import * as Chat from "./module/chat.mjs";
+
 /* -------------------------------------------- */
 /*  Init Hook                                   */
 /* -------------------------------------------- */
@@ -135,3 +137,8 @@ function rollItemMacro(itemUuid) {
     item.roll();
   });
 }
+
+/* -------------------------------------------- */
+/*  Chatlog Hook                                */
+/* -------------------------------------------- */
+Hooks.on("renderChatLog", (app, html, data) => Chat.addCharacterListeners(html));

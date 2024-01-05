@@ -39,25 +39,7 @@ export class OutbreakUndead2eItem extends Item {
    */
   async roll() {
     
-    console.log("item.roll");
-
-    let chatData = {
-      user: game.user._id,
-      speaker: ChatMessage.getSpeaker()
-    };
-    
-    let cardData = {
-      ...this.data,
-      owner: this.actor.id
-    };
-
-    chatData.context = await renderTemplate(this.chatTemplate[this.type], cardData);
-
-    chatData.roll = true;
-
-    return ChatMessage.create(chatData);
-
-    /* Boilerplate default
+    //Boilerplate default
     const item = this;
 
     // Initialize chat data.
@@ -80,6 +62,7 @@ export class OutbreakUndead2eItem extends Item {
       const rollData = this.getRollData();
 
       // Invoke the roll and submit it to chat.
+      console.log("In Roll function");
       const roll = new Roll(rollData.item.formula, rollData);
       // If you need to store the value first, uncomment the next line.
       // let result = await roll.roll({async: true});
@@ -90,6 +73,5 @@ export class OutbreakUndead2eItem extends Item {
       });
       return roll;
     }
-    */
   }
 }
