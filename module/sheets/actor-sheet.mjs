@@ -1,5 +1,5 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
-import * as Dice from "../dice.mjs";
+//import * as Dice from "../dice.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -97,11 +97,6 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
       8: [],
       9: []
     };
-    const skills = {
-      Basic: [],
-      Trained: [],
-      Expert: []
-    };
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -169,7 +164,10 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     html.find('.rollable').click(this._onRoll.bind(this));
 
     // Skill Card
+    // TODO: Make this open a new dialog with the item
     html.find(".skill-card").click(this._onSkillCard.bind(this));
+    // TODO: Make this what click currently is
+    //html.find(".skill-card").contextmenu(this._onSkillCardRightClick.bind(this));
     // Skill Roll
     html.find(".skill-roll").click(this._onSkillRoll.bind(this));
 
@@ -291,7 +289,6 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
       }
     }
 
-
     // Handle rolls that supply the formula directly.
     if (dataset.roll) {
       let label = dataset.label ? `${dataset.label}` : '';
@@ -305,11 +302,26 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     }
   }
 
-  _onSkillCard(event) {
+  async _onSkillCard(event) {
+    event.preventDefault(event);
+
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+
+   let message_content = "@UUID[Compendium.outbreakundead2e.skills.Item." + dataset.itemId + "]{" + dataset.label + "}"
+
+    // Debug
+    console.log(dataset);
+
+    //Output Skill card based on UUID
+    ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: message_content
+    });
 
   }
 
-  _onSkillRoll(event) {
+  async _onSkillRoll(event) {
     event.preventDefault();
     
     const element = event.currentTarget;
@@ -317,7 +329,8 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     const actorData = this.actor.toObject(false);
     const level_of_play = actorData.system.level_of_play;
 
-    console.log(level_of_play);
+    // Debug
+    //console.log(dataset);
 
     // Determine formula based on Level of Play
     // NOTE: Don't need to worry about arcade because they do not have Skills
@@ -329,18 +342,26 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
       rollFormula = "1d10*10";
     }
     
-    let label = dataset.label ? `${dataset.label}` : "";
-    let percent_chance = dataset.percentChance;
-    let _flavor = label + ": Percent Chance " + percent_chance + "%";
+    // Prepare data for the skill card
+    let cardData = {
+      label: dataset.label,
+      percentChance: dataset.percentChance
+    };
 
+    // Roll
     let roll = new Roll(rollFormula, this.actor.getRollData());
+    
     // TODO: Create an message sheet for Skill checks in stead of using this
-    roll.toMessage({
+    //ChatMessage.applyRollMode(game.settings.get('core', 'rollMode'))
+    
+    ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      flavor: _flavor,
+      content: await renderTemplate("systems/outbreakundead2e/templates/item/chat/skill-card.hbs", cardData),
       rollMode: game.settings.get('core', 'rollMode'),
+      rolls: roll
     });
     
+
   }
 
 }

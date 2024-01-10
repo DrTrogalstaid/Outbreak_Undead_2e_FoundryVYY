@@ -10,7 +10,7 @@
   cursor: pointer;
 }
 
-.skill-roll:hover, .skill-roll:focus {
+.skill-roll:hover, .skill-roll:focus, .skill-card:hover, .skill-card:focus {
   color: #000;
   text-shadow: 0 0 10px red;
   cursor: pointer;

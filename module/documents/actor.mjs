@@ -116,6 +116,8 @@ export class OutbreakUndead2eActor extends Actor {
       {
         skill.bonus = 0;
       }
+      // Add skills' compenidum UUID
+      skill.uuid = game.i18n.localize(CONFIG.OUTBREAKUNDEAD2E.skillsUUID[key])
     }
     // Trained Skills
     for (let [key, skill] of Object.entries(systemData.skills.trained))
@@ -155,6 +157,8 @@ export class OutbreakUndead2eActor extends Actor {
       {
         skill.bonus = 0;
       }
+      // Add skills' compenidum UUID
+      skill.uuid = game.i18n.localize(CONFIG.OUTBREAKUNDEAD2E.skillsUUID[key])
     }
     // Expert Skills
     for (let [key, skill] of Object.entries(systemData.skills.expert))
@@ -194,9 +198,9 @@ export class OutbreakUndead2eActor extends Actor {
       {
         skill.bonus = 0;
       }
+      // Add skills' compenidum UUID
+      skill.uuid = game.i18n.localize(CONFIG.OUTBREAKUNDEAD2E.skillsUUID[key])
     }
-
-
   }
 
   /**

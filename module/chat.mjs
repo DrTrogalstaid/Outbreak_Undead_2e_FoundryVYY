@@ -1,4 +1,4 @@
-import * as Dice from "./dice.mjs";
+//import * as Dice from "./dice.mjs";
 
 export function addChatListeners(html) {
     html.on("click", "button.skill", onSkill);
