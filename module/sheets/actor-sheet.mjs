@@ -164,10 +164,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     html.find('.rollable').click(this._onRoll.bind(this));
 
     // Skill Card
-    // TODO: Make this open a new dialog with the item
     html.find(".skill-card").click(this._onSkillCard.bind(this));
-    // TODO: Make this what click currently is
-    //html.find(".skill-card").contextmenu(this._onSkillCardRightClick.bind(this));
     // Skill Roll
     html.find(".skill-roll").click(this._onSkillRoll.bind(this));
 
@@ -308,7 +305,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const dataset = element.dataset;
 
-   let message_content = "@UUID[Compendium.outbreakundead2e.skills.Item." + dataset.itemId + "]{" + dataset.label + "}"
+    let message_content = "@UUID[Compendium.outbreakundead2e.skills.Item." + dataset.itemId + "]{" + dataset.label + "}"
 
     // Debug
     console.log(dataset);
@@ -318,7 +315,6 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content: message_content
     });
-
   }
 
   async _onSkillRoll(event) {
