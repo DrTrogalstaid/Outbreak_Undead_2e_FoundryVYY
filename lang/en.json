@@ -1,13 +1,13 @@
 {
-  "OUTBREAKUNDEAD2E.AbilityStr": "Strength",
-  "OUTBREAKUNDEAD2E.AbilityPer": "Perception",
-  "OUTBREAKUNDEAD2E.AbilityEmp": "Empathy",
-  "OUTBREAKUNDEAD2E.AbilityWil": "Willpower",
+  "OUTBREAKUNDEAD2E.SpewStr": "Strength",
+  "OUTBREAKUNDEAD2E.SpewPer": "Perception",
+  "OUTBREAKUNDEAD2E.SpewEmp": "Empathy",
+  "OUTBREAKUNDEAD2E.SpewWil": "Willpower",
 
-  "OUTBREAKUNDEAD2E.AbilityStrAbbr": "str",
-  "OUTBREAKUNDEAD2E.AbilityPerAbbr": "per",
-  "OUTBREAKUNDEAD2E.AbilityEmpAbbr": "emp",
-  "OUTBREAKUNDEAD2E.AbilityWilAbbr": "wil",
+  "OUTBREAKUNDEAD2E.SpewStrAbbr": "str",
+  "OUTBREAKUNDEAD2E.SpewPerAbbr": "per",
+  "OUTBREAKUNDEAD2E.SpewEmpAbbr": "emp",
+  "OUTBREAKUNDEAD2E.SpewWilAbbr": "wil",
 
   "OUTBREAKUNDEAD2E.Arcade": "Arcade",
   "OUTBREAKUNDEAD2E.WeekendWarrior": "Weekend Warrior",
