@@ -59,21 +59,21 @@ export class OutbreakUndead2eActor extends Actor {
     
 
 
-    // Loop through ability scores, and add their modifiers to our sheet output.
+    // Loop through Spew scores, and add their modifiers to our sheet output.
     // TODO: Change abilities to "spew" 
-    for (let [key, ability] of Object.entries(systemData.abilities)) 
+    for (let [key, spew] of Object.entries(systemData.spew)) 
     {
-      ability.mod = Math.floor(ability.value / 10);
+      spew.mod = Math.floor(ability.value / 10);
     }
 
     // Set Damage Threshold - Based on str.mod and wil.mod
-    systemData.damage_threshold.spew = (systemData.abilities.str.mod + systemData.abilities.wil.mod);
+    systemData.damage_threshold.spew = (systemData.spew.str.mod + systemData.spew.wil.mod);
     //TODO: Determine what this is.
     systemData.damage_threshold.bonus = 0;
     systemData.damage_threshold.total = (systemData.damage_threshold.spew + systemData.damage_threshold.bonus);
 
     // Set Morale - Based on wil.mod and emp.mod
-    systemData.morale.spew = (systemData.abilities.wil.mod + systemData.abilities.emp.mod);
+    systemData.morale.spew = (systemData.spew.wil.mod + systemData.spew.emp.mod);
     //TODO: Determine what this is.
     systemData.morale.bonus = 0;
     systemData.morale.total = (systemData.morale.spew + systemData.morale.bonus);
@@ -84,31 +84,31 @@ export class OutbreakUndead2eActor extends Actor {
       switch (skill.primary)
       {
         case "strength":
-          skill.base = systemData.abilities.str.value;
+          skill.base = systemData.spew.str.value;
           break; 
         case "perception":
-          skill.base = systemData.abilities.per.value;
+          skill.base = systemData.spew.per.value;
           break; 
         case "empathy":
-          skill.base = systemData.abilities.emp.value;
+          skill.base = systemData.spew.emp.value;
           break; 
         case "willpower":
-          skill.base = systemData.abilities.wil.value;
+          skill.base = systemData.spew.wil.value;
           break; 
       }
       switch (skill.supporting)
       {
         case "strength":
-          skill.base += systemData.abilities.str.mod; 
+          skill.base += systemData.spew.str.mod; 
           break; 
         case "perception":
-          skill.base += systemData.abilities.per.mod;
+          skill.base += systemData.spew.per.mod;
           break; 
         case "empathy":
-          skill.base += systemData.abilities.emp.mod;
+          skill.base += systemData.spew.emp.mod;
           break; 
         case "willpower":
-          skill.base += systemData.abilities.wil.mod;
+          skill.base += systemData.spew.wil.mod;
           break; 
       }
       //TODO: Add bonus based on advancement level
@@ -125,31 +125,31 @@ export class OutbreakUndead2eActor extends Actor {
       switch (skill.primary)
       {
         case "strength":
-          skill.base = systemData.abilities.str.value;
+          skill.base = systemData.spew.str.value;
           break; 
         case "perception":
-          skill.base = systemData.abilities.per.value;
+          skill.base = systemData.spew.per.value;
           break; 
         case "empathy":
-          skill.base = systemData.abilities.emp.value;
+          skill.base = systemData.spew.emp.value;
           break; 
         case "willpower":
-          skill.base = systemData.abilities.wil.value;
+          skill.base = systemData.spew.wil.value;
           break; 
       }
       switch (skill.supporting)
       {
         case "strength":
-          skill.base += systemData.abilities.str.mod; 
+          skill.base += systemData.spew.str.mod; 
           break; 
         case "perception":
-          skill.base += systemData.abilities.per.mod;
+          skill.base += systemData.spew.per.mod;
           break; 
         case "empathy":
-          skill.base += systemData.abilities.emp.mod;
+          skill.base += systemData.spew.emp.mod;
           break; 
         case "willpower":
-          skill.base += systemData.abilities.wil.mod;
+          skill.base += systemData.spew.wil.mod;
           break; 
       }
       //TODO: Add bonus based on advancement level
@@ -166,31 +166,31 @@ export class OutbreakUndead2eActor extends Actor {
       switch (skill.primary)
       {
         case "strength":
-          skill.base = systemData.abilities.str.mod;
+          skill.base = systemData.spew.str.mod;
           break; 
         case "perception":
-          skill.base = systemData.abilities.per.mod;
+          skill.base = systemData.spew.per.mod;
           break; 
         case "empathy":
-          skill.base = systemData.abilities.emp.mod;
+          skill.base = systemData.spew.emp.mod;
           break; 
         case "willpower":
-          skill.base = systemData.abilities.wil.mod;
+          skill.base = systemData.spew.wil.mod;
           break; 
       }
       switch (skill.supporting)
       {
         case "strength":
-          skill.base += systemData.abilities.str.mod; 
+          skill.base += systemData.spew.str.mod; 
           break; 
         case "perception":
-          skill.base += systemData.abilities.per.mod;
+          skill.base += systemData.spew.per.mod;
           break; 
         case "empathy":
-          skill.base += systemData.abilities.emp.mod;
+          skill.base += systemData.spew.emp.mod;
           break; 
         case "willpower":
-          skill.base += systemData.abilities.wil.mod;
+          skill.base += systemData.spew.wil.mod;
           break; 
       }
       //TODO: Add bonus based on advancement level
@@ -235,10 +235,10 @@ export class OutbreakUndead2eActor extends Actor {
       return
     };
 
-    // Copy the ability scores to the top level, so that rolls can use
+    // Copy the spew scores to the top level, so that rolls can use
     // formulas like `@str.mod + 4`.
-    if (data.abilities) {
-      for (let [k, v] of Object.entries(data.abilities)) {
+    if (data.spew) {
+      for (let [k, v] of Object.entries(data.spew)) {
         data[k] = foundry.utils.deepClone(v);
       }
     }
