@@ -63,7 +63,7 @@ export class OutbreakUndead2eActor extends Actor {
     // TODO: Change abilities to "spew" 
     for (let [key, spew] of Object.entries(systemData.spew)) 
     {
-      spew.mod = Math.floor(ability.value / 10);
+      spew.mod = Math.floor(spew.value / 10);
     }
 
     // Set Damage Threshold - Based on str.mod and wil.mod
