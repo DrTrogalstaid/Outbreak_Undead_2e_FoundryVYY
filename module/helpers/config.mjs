@@ -4,7 +4,7 @@ export const OUTBREAKUNDEAD2E = {};
  * The set of Spew Scores used within the sytem.
  * @type {Object}
  */
- OUTBREAKUNDEAD2E.spew = {
+ OUTBREAKUNDEAD2E.Spew = {
   "str": "OUTBREAKUNDEAD2E.SpewStr",
   "per": "OUTBREAKUNDEAD2E.SpewPer",
   "emp": "OUTBREAKUNDEAD2E.SpewEmp",

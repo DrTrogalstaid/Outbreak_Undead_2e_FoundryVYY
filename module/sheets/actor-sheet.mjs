@@ -70,7 +70,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
   _prepareCharacterData(context) {
     // Handle Spew scores.
     for (let [k, v] of Object.entries(context.system.spew)) {
-      v.label = game.i18n.localize(CONFIG.OUTBREAKUNDEAD2E.spew[k]) ?? k;
+      v.label = game.i18n.localize(CONFIG.OUTBREAKUNDEAD2E.Spew[k]) ?? k;
     }
   }
 
