@@ -68,9 +68,9 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterData(context) {
-    // Handle ability scores.
-    for (let [k, v] of Object.entries(context.system.abilities)) {
-      v.label = game.i18n.localize(CONFIG.OUTBREAKUNDEAD2E.abilities[k]) ?? k;
+    // Handle Spew scores.
+    for (let [k, v] of Object.entries(context.system.spew)) {
+      v.label = game.i18n.localize(CONFIG.OUTBREAKUNDEAD2E.Spew[k]) ?? k;
     }
   }
 
@@ -160,7 +160,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
 
-    // Rollable abilities.
+    // Rollable spew.
     html.find('.rollable').click(this._onRoll.bind(this));
 
     // Skill Card

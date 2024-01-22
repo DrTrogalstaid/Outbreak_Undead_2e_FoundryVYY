@@ -21,14 +21,14 @@
       <div class="flexrow flex2">
         <div class="flexcol">
           <h4 class="resource-label sheet-gear-bonus flex-group-center">S.P.E.W. Attributes</h4>
-          <div class="abilities flexrow">  
-            {{#each system.abilities as |ability key|}}
+          <div class="spew flexrow">  
+            {{#each system.spew as |spew key|}}
               <div class="flexcol flex-group-center">
-                <img class="item sheet-image-no-border" src="systems/outbreakundead2e/assets/icons/spew/{{ability.label}}.png" height="56" />
-                <label for="system.abilities.{{key}}.value" class="spew-name rollable resource-label flexlarge align-left" data-label="{{key}}">{{ability.label}}</label>
+                <img class="item sheet-image-no-border" src="systems/outbreakundead2e/assets/icons/spew/{{spew.label}}.png" height="56" />
+                <label for="system.spew.{{key}}.value" class="spew-name rollable resource-label flexlarge align-left" data-label="{{key}}">{{spew.label}}</label>
                 <div class="flexrow">
-                  <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                  <div class="ability-mod rollable item sheet-box-border" data-roll="d100+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</div>
+                  <!--TODO: Highlight the ten's didget like in the source book-->
+                  <input type="text" name="system.spew.{{key}}.value" value="{{spew.value}}" data-dtype="Number"/>
                 </div>
               </div>
             {{/each}}

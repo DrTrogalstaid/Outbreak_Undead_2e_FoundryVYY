@@ -22,7 +22,7 @@
     "character": {
       "level_of_play": "survivalist",
       "templates": ["base"],
-      "abilities": {
+      "spew": {
         "str": {
           "value": 0
         },
