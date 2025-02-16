@@ -326,7 +326,7 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
     const level_of_play = actorData.system.level_of_play;
 
     // Debug
-    //console.log(dataset);
+    console.log(dataset);
 
     // Determine formula based on Level of Play
     // NOTE: Don't need to worry about arcade because they do not have Skills
@@ -338,10 +338,15 @@ export class OutbreakUndead2eActorSheet extends ActorSheet {
       rollFormula = "1d10*10";
     }
     
+    let skill = await fromUuid(dataset.uuid)
+
+    console.log(skill);
+
     // Prepare data for the skill card
     let cardData = {
-      label: dataset.label,
-      percentChance: dataset.percentChance
+      label: skill.name,
+      percentChance: dataset.percentChance,
+      description: skill.system.skill.description
     };
 
     // Roll

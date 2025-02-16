@@ -30,7 +30,14 @@
           <!--Skill Check % Total-->
           <label class="flex0" for="system.skills.basic.{{key}}.base"></label>
           <!--TODO: This is not the way we roll. The bonus' here are actually the check DC.-->
-          <div name="system.skills.basic.{{key}}.base" class="sheet-box-border skill-roll" data-roll-type="skill" data-label="{{skill.name}}" data-percent-chance="{{skill.base}}">{% {{skill.base}} }</div>
+          <div 
+            name="system.skills.basic.{{key}}.base" 
+            class="sheet-box-border skill-roll"
+            data-uuid="Compendium.outbreakundead2e.skills.Item.{{skill.uuid}}"
+            data-percent-chance="{{skill.base}}"
+          >
+            {% {{skill.base}} }
+          </div>
         </li>
       {{/each}}
         </div>

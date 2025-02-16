@@ -2,7 +2,37 @@
 
 ![Foundry v11](https://img.shields.io/badge/foundry-v11-green)
 
-This system is a outbreakundead2e system that you can use as a starting point for building your own custom systems. It's similar to Simple World-building, but has examples of creating attributes in code rather than dynamically through the UI.
+This system is the outbreakundead2e system made by DrTrog. 
+
+## System TODOS
+# Actor
+TODO: Clicking on skill:
+        - Print DC and skill description to chat
+        - Roll d100
+TODO: Clicking on SPEW attribute
+        - Check option 
+        - Save option
+TODO: Triggered Effects Tab
+TODO: Character Traits Tab
+TODO: Equipment Tab
+TODO: Effects Tab
+TODO: Survivalist Stuff??
+
+# Compendiums
+TODO: Skills, Fill out descriptions and components
+        - Trained
+        - Expert
+TODO: Skills, Create components
+        - Dice Pools
+        - Triggered Effects
+        - Modifiers
+TODO: Items
+
+
+TODO: Dice Pool Integration https://foundryvtt.com/article/dice-advanced/
+
+
+
 
 ## Usage
 
